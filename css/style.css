@@ -1083,3 +1083,33 @@ header.site-header #gnb .btn.active::before{
 #works .portfolio-controls .portfolio-next::before{
   clip-path:path("M 2 2 C 1 1 0 2 0 4 L 0 27 C 0 30 3 31 5 29 L 23 18 C 25 17 25 14 23 13 Z")!important;
 }
+
+/* Portfolio controls correction — center buttons inside the curled middle leaves */
+#works .portfolio-controls{
+  left:50%!important;
+  bottom:52px!important;
+  transform:translateX(-50%)!important;
+  gap:16px!important;
+  z-index:6!important;
+}
+#works .portfolio-controls button{
+  width:68px!important;
+  height:68px!important;
+  border-radius:50%!important;
+  background:#747a50!important;
+}
+#works .portfolio-controls button::before{
+  width:26px!important;
+  height:30px!important;
+  background:#f6f6ee!important;
+  clip-path:none!important;
+  border-radius:5px!important;
+}
+#works .portfolio-controls .portfolio-prev::before{
+  transform:translate(-50%,-50%)!important;
+  clip-path:polygon(88% 5%,88% 95%,10% 50%)!important;
+}
+#works .portfolio-controls .portfolio-next::before{
+  transform:translate(-50%,-50%)!important;
+  clip-path:polygon(12% 5%,12% 95%,90% 50%)!important;
+}
