@@ -31,7 +31,7 @@ function initWorksSwiper() {
       <img class="d5" src="./images/간단나무5.png" alt=""><img class="d6" src="./images/나뭇가지와 나뭇잎4.png" alt="">
     </div><div class="portfolio-controls"><button class="portfolio-prev" type="button" aria-label="이전 작품">◀</button><button class="portfolio-next" type="button" aria-label="다음 작품">▶</button></div>`);
   works_swiper = new Swiper('#works_inner', {
-    wrapperClass:"list", slideClass:"item", slidesPerView:3, spaceBetween:26, centeredSlides:true, loop:true, speed:700, nested:true,
+    wrapperClass:"list", slideClass:"item", slidesPerView:3, spaceBetween:26, centeredSlides:false, loop:true, speed:700, nested:true, watchSlidesProgress:true,
     navigation:{nextEl:".portfolio-next",prevEl:".portfolio-prev"},
     breakpoints:{0:{slidesPerView:1.15,spaceBetween:14},700:{slidesPerView:2,spaceBetween:20},1100:{slidesPerView:3,spaceBetween:26}}
   });
