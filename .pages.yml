@@ -28,8 +28,8 @@ content:
         options:
           collection: detail_pages
           search: "title,path"
-          value: "{path}"
-          label: "{title} — {path}"
+          value: "{fields.path}"
+          label: "{fields.title} — {fields.path}"
       - { name: published, label: 공개 여부, type: boolean, default: true }
       - { name: featured, label: 메인 노출, type: boolean, default: false }
       - { name: order, label: 노출 순서, type: number }
@@ -52,7 +52,6 @@ content:
     type: collection
     path: content/guestbook
     format: json
-    filename: "{year}-{month}-{day}-{hour}{minute}{second}-{primary}.json"
     view:
       primary: name
       fields: [name, createdAt, approved]
