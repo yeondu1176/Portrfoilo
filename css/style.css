@@ -1386,3 +1386,38 @@ header.site-header #gnb .btn.active::before{
   transform:translateX(-50%) rotate(-10deg)!important;
   opacity:1!important;
 }
+
+
+/* Fuller botanical search composition — decorative layer only */
+#works .search-deco-vine{
+  width:235px!important;
+  height:auto!important;
+  left:50%!important;
+  top:-48px!important;
+  transform:translateX(-50%) rotate(1deg)!important;
+  opacity:.78!important;
+  z-index:29!important;
+}
+#works .search-deco-leaf-left{
+  width:34px!important;
+  height:auto!important;
+  left:24%!important;
+  top:-29px!important;
+  transform:rotate(-24deg)!important;
+  opacity:.92!important;
+  z-index:30!important;
+}
+#works .search-deco-leaf-right{
+  width:31px!important;
+  height:auto!important;
+  right:24%!important;
+  top:-27px!important;
+  transform:rotate(21deg)!important;
+  opacity:.9!important;
+  z-index:30!important;
+}
+@media(max-width:700px){
+  #works .search-deco-vine{width:175px!important;top:-39px!important}
+  #works .search-deco-leaf-left{width:27px!important;left:22%!important;top:-24px!important}
+  #works .search-deco-leaf-right{width:25px!important;right:22%!important;top:-23px!important}
+}
