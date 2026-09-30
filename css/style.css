@@ -640,3 +640,115 @@ header #gnb .btn.active {
   #about .about-content{transform:none}
   #about .about-vine-image{width:210px;max-height:100px}
 }
+
+
+/* Header — Yeondu's Design */
+header.site-header{
+  position:fixed;
+  inset:0 0 auto 0;
+  width:100%;
+  height:86px;
+  padding:0 7.5% 0 2.2%;
+  box-sizing:border-box;
+  z-index:999;
+  display:grid;
+  grid-template-columns:minmax(300px,1fr) minmax(360px,1.55fr) auto;
+  align-items:center;
+  gap:28px;
+  background:rgba(246,246,238,.78);
+  backdrop-filter:blur(3px);
+  box-shadow:none;
+  border-bottom:0;
+  font-family:"MapoDacapo","Pretendard Variable",Pretendard,sans-serif;
+  color:#282b20;
+}
+header.site-header .header-brand{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  min-width:0;
+}
+header.site-header .header-brand-leaf{
+  width:76px;
+  height:70px;
+  object-fit:contain;
+  flex:0 0 auto;
+}
+header.site-header #title{
+  font-size:27px;
+  line-height:1;
+  font-weight:400;
+  white-space:nowrap;
+}
+header.site-header .header-center-deco{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  min-width:0;
+}
+header.site-header .header-center-deco .header-line{
+  display:block;
+  height:1px;
+  background:#8e9575;
+  opacity:.8;
+  flex:1 1 auto;
+}
+header.site-header .header-center-deco img{
+  width:72px;
+  height:50px;
+  object-fit:contain;
+  flex:0 0 auto;
+}
+header.site-header #gnb ul{
+  display:flex;
+  align-items:center;
+  gap:34px;
+}
+header.site-header #gnb .btn{
+  position:relative;
+  padding:29px 0 18px;
+  color:#282b20;
+  font-size:13px;
+  line-height:1;
+  cursor:pointer;
+  transition:none;
+}
+header.site-header #gnb .btn.active{
+  color:#282b20;
+}
+header.site-header #gnb .btn.active::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:8px;
+  width:100%;
+  height:1px;
+  background:#68714e;
+  transform:translateX(-50%);
+}
+header.site-header #gnb .btn.active::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:2px;
+  width:34px;
+  height:24px;
+  transform:translateX(-50%);
+  background:url("../images/나뭇잎 3.png") center/contain no-repeat;
+  pointer-events:none;
+}
+@media(max-width:1050px){
+  header.site-header{
+    grid-template-columns:auto 1fr auto;
+    padding:0 24px;
+  }
+  header.site-header .header-center-deco{display:none}
+  header.site-header #gnb ul{gap:22px}
+}
+@media(max-width:700px){
+  header.site-header{height:70px;padding:0 16px}
+  header.site-header .header-brand-leaf{width:45px;height:45px}
+  header.site-header #title{font-size:20px}
+  header.site-header #gnb ul{gap:12px}
+  header.site-header #gnb .btn{font-size:10px;padding-top:24px}
+}
