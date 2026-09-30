@@ -788,3 +788,14 @@ header.site-header #gnb .btn.active::after{
   transform:translateX(-50%) scaleX(1);
   opacity:1;
 }
+
+
+/* Enlarge active menu leaf (나뭇잎 2) */
+header.site-header #gnb .btn.active::before{
+  width:46px!important;
+  height:34px!important;
+  top:-5px!important;
+  background-size:contain!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+}
