@@ -859,3 +859,18 @@ header.site-header #gnb .btn.active::before{
     margin-top:-66px!important;
   }
 }
+
+
+/* Extra sparkles around About ME */
+#about .about-spark-3{
+  left:62%;
+  top:40%;
+  font-size:16px;
+  color:#758052;
+}
+#about .about-spark-4{
+  left:8%;
+  top:63%;
+  font-size:13px;
+  color:#8a9568;
+}
