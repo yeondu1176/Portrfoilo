@@ -80,7 +80,17 @@ function setupPortfolioSearch(allWorks, list) {
     setupPortfolioSearch(works, list);
   };
 
-  input.addEventListener("input", event => render(event.target.value));
+  const button = document.querySelector(".portfolio-search-button");
+  const runSearch = () => render(input.value);
+
+  input.addEventListener("input", runSearch);
+  input.addEventListener("keydown", event => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      runSearch();
+    }
+  });
+  if (button) button.addEventListener("click", runSearch);
 }
 
 async function loadWorks() {
