@@ -1149,3 +1149,20 @@ header.site-header #gnb .btn.active::before{
     visibility:hidden!important;
   }
 }
+
+/* Hard clip: exactly three portfolio cards visible at every carousel position */
+@media(min-width:1100px){
+  #works #works_inner{
+    width:min(1215px,84vw)!important;
+    overflow:hidden!important;
+    clip-path:inset(0)!important;
+  }
+  #works #works_inner .list{overflow:visible!important}
+  #works #works_inner .item{visibility:hidden!important;opacity:0!important;pointer-events:none!important}
+  #works #works_inner .item.swiper-slide-visible{
+    visibility:visible!important;
+    opacity:1!important;
+    pointer-events:auto!important;
+  }
+  #works #works_inner .item.swiper-slide-visible:nth-of-type(n){clip-path:none!important}
+}
