@@ -1125,11 +1125,12 @@ header.site-header #gnb .btn.active::before{
   left:50%!important;
   bottom:64px!important;
   transform:translateX(-50%)!important;
-  gap:10px!important;
+  gap:20px!important;
 }
 #works .portfolio-controls button{
   width:76px!important;
   height:76px!important;
+  background:#9fa77a!important;
 }
 #works .portfolio-controls button::before{
   width:38px!important;
