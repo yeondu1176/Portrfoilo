@@ -82,5 +82,17 @@
     "published": true,
     "featured": false,
     "order": 7
+  },
+  {
+    "id": "work-08",
+    "title": "New Project",
+    "category": "Portfolio",
+    "year": 2026,
+    "thumbnail": "https://picsum.photos/900/620?random=18",
+    "description": "새로운 포트폴리오 작업을 위한 여덟 번째 카드입니다.",
+    "detailPage": "",
+    "published": true,
+    "featured": false,
+    "order": 8
   }
 ]
