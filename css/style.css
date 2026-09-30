@@ -824,3 +824,20 @@ header.site-header #gnb .btn.active::before{
     margin-top:-18px!important;
   }
 }
+
+
+/* About branch — tuck directly under ME like the reference */
+#about .about-vine-image{
+  width:124%!important;
+  max-width:330px!important;
+  max-height:145px!important;
+  margin-top:-58px!important;
+  margin-left:-10px!important;
+}
+@media(max-height:760px) and (min-width:761px){
+  #about .about-vine-image{
+    width:114%!important;
+    max-height:120px!important;
+    margin-top:-48px!important;
+  }
+}
