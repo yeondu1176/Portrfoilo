@@ -799,3 +799,11 @@ header.site-header #gnb .btn.active::before{
   background-repeat:no-repeat!important;
   background-position:center!important;
 }
+
+
+/* Active navigation leaf: larger and lower */
+header.site-header #gnb .btn.active::before{
+  width:62px!important;
+  height:44px!important;
+  top:0!important;
+}
