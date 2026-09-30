@@ -841,3 +841,21 @@ header.site-header #gnb .btn.active::before{
     margin-top:-48px!important;
   }
 }
+
+
+/* About branch — smaller and tighter to ME */
+#about .about-vine-image{
+  width:98%!important;
+  max-width:255px!important;
+  max-height:112px!important;
+  margin-top:-76px!important;
+  margin-left:-2px!important;
+}
+@media(max-height:760px) and (min-width:761px){
+  #about .about-vine-image{
+    width:92%!important;
+    max-width:235px!important;
+    max-height:102px!important;
+    margin-top:-66px!important;
+  }
+}
