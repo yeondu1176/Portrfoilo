@@ -1067,3 +1067,45 @@ header.site-header #gnb .btn.active::before{
   max-height:105px!important;
 }
 #works .portfolio-controls{bottom:22px!important;gap:68px!important}
+
+/* Portfolio final alignment — reference 2 footer composition */
+#works #works_inner .item,
+#works #works_inner .work-card{
+  height:450px!important;
+  min-height:450px!important;
+  max-height:450px!important;
+}
+#works #works_inner .thumb-box{
+  height:220px!important;
+  min-height:220px!important;
+  max-height:220px!important;
+  background:#fff!important;
+}
+#works #works_inner .thumb-box img[src=""],
+#works #works_inner .thumb-box img:not([src]){visibility:hidden!important}
+#works .portfolio-bottom-deco{
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  height:118px!important;
+  width:100%!important;
+  justify-content:center!important;
+  align-items:flex-end!important;
+}
+#works .portfolio-bottom-deco .d1{width:22%!important;margin-right:-8%!important}
+#works .portfolio-bottom-deco .d2{width:15%!important;margin-right:-5%!important}
+#works .portfolio-bottom-deco .d3{width:11%!important;max-height:78px!important;margin-right:-1.5%!important;transform:scaleX(-1)!important}
+#works .portfolio-bottom-deco .d4{width:10%!important;max-height:72px!important;margin-right:-1.5%!important}
+#works .portfolio-bottom-deco .d5{width:14%!important;margin-right:-5%!important}
+#works .portfolio-bottom-deco .d6{width:20%!important;max-height:112px!important}
+#works .portfolio-controls{
+  left:50%!important;
+  bottom:22px!important;
+  transform:translateX(-50%)!important;
+  gap:34px!important;
+}
+#works .portfolio-controls button{
+  width:58px!important;
+  height:58px!important;
+  font-size:24px!important;
+}
