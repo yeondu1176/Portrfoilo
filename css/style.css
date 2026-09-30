@@ -1226,3 +1226,27 @@ header.site-header #gnb .btn.active::before{
   border:2px solid #96a345!important;
   box-shadow:0 6px 18px rgba(78,88,46,.12)!important;
 }
+
+
+/* Portfolio search clickable button */
+#works .portfolio-search-button{
+  position:absolute!important;
+  right:7px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  width:38px!important;
+  height:38px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:50%!important;
+  background:#96a345!important;
+  color:#fff!important;
+  font-size:22px!important;
+  line-height:1!important;
+  display:grid!important;
+  place-items:center!important;
+  cursor:pointer!important;
+  z-index:22!important;
+}
+#works .portfolio-search-button:hover{filter:brightness(.96)}
+#works .portfolio-search-button:active{transform:translateY(-50%) scale(.96)!important}
