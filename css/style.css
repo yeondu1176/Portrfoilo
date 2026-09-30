@@ -1265,3 +1265,9 @@ header.site-header #gnb .btn.active::before{
 #works #works_inner{
   margin-top:0!important;
 }
+
+
+/* Search position only — keep cards untouched */
+#works .portfolio-search{
+  top:82px!important;
+}
