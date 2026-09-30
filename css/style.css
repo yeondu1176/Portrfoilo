@@ -1128,3 +1128,24 @@ header.site-header #gnb .btn.active::before{
     pointer-events:auto;
   }
 }
+
+/* Portfolio exact 3-card viewport — no partial fourth card */
+@media(min-width:1100px){
+  #works #works_inner{
+    width:min(1215px,84vw)!important;
+    overflow:hidden!important;
+    box-sizing:border-box!important;
+  }
+  #works #works_inner .list{
+    overflow:visible!important;
+    align-items:stretch!important;
+  }
+  #works #works_inner .item{
+    visibility:visible!important;
+    opacity:1!important;
+    box-sizing:border-box!important;
+  }
+  #works #works_inner .item:not(.swiper-slide-visible){
+    visibility:hidden!important;
+  }
+}
