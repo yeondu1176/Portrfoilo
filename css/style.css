@@ -1120,6 +1120,7 @@ header.site-header #gnb .btn.active::before{
   right:auto!important;
   width:92%!important;
   transform:translateX(-50%)!important;
+  z-index:7!important;
 }
 #works .portfolio-controls{
   left:50%!important;
