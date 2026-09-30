@@ -902,299 +902,84 @@ header.site-header #gnb .btn.active::before{
   color:#7d8859!important;
 }
 
-/* Portfolio 3-card infinite carousel */
-#works{position:relative!important;overflow:hidden!important;background:#f6f6ee!important;background-image:none!important;padding-top:76px!important;box-sizing:border-box!important}
+
+/* Portfolio — clean single source of truth */
+#works{
+  position:relative!important;
+  overflow:hidden!important;
+  box-sizing:border-box!important;
+  padding-top:76px!important;
+  background:#f6f6ee!important;
+  background-image:none!important;
+}
 #works .work-header{display:none!important}
-#works #works_inner{width:min(1215px,78vw)!important;padding:48px 0 175px!important;overflow:hidden!important;box-sizing:border-box!important;z-index:2}
-#works #works_inner .list{display:flex!important;align-items:center!important}
-#works #works_inner .item{width:auto!important;flex-shrink:0!important}
-#works #works_inner .work-card{height:530px!important;box-sizing:border-box!important;padding:20px!important;border:0!important;border-radius:22px!important;background:#c4c29b!important;box-shadow:none!important;overflow:hidden!important}
-#works #works_inner .work-card:hover{transform:none!important}
-#works #works_inner .thumb-box{width:100%!important;height:285px!important;aspect-ratio:auto!important;border-radius:20px!important;background:#fff!important}
-#works #works_inner .thumb-box img{width:100%!important;height:100%!important;object-fit:cover!important;border-radius:20px!important}
-#works #works_inner .meta-info{margin-top:18px!important;color:#3e4230!important}
-#works #works_inner .project-title{font-family:"MapoDacapo","Pretendard Variable",Pretendard,sans-serif!important;font-size:24px!important;font-weight:400!important;margin:10px 0 5px!important}
-#works #works_inner .project-desc{font-size:12px!important;line-height:1.55!important}
-#works .portfolio-bottom-deco{position:absolute;left:2.5%;right:2.5%;bottom:10px;height:155px;z-index:3;display:flex;align-items:flex-end;justify-content:center;pointer-events:none}
-#works .portfolio-bottom-deco img{position:relative;display:block;object-fit:contain;flex:0 0 auto}
-#works .portfolio-bottom-deco .d1{width:20%;transform:scaleX(-1);margin-right:-6%}
-#works .portfolio-bottom-deco .d2{width:19%;margin-right:-7%}
-#works .portfolio-bottom-deco .d3{width:21%;transform:scaleX(-1);margin-right:-7%}
-#works .portfolio-bottom-deco .d4{width:18%;margin-right:-7%}
-#works .portfolio-bottom-deco .d5{width:18%;margin-right:-6%}
-#works .portfolio-bottom-deco .d6{width:22%}
-#works .portfolio-controls{position:absolute;left:50%;bottom:42px;transform:translateX(-50%);z-index:5;display:flex;gap:72px}
-#works .portfolio-controls button{width:72px;height:72px;border:0;border-radius:50%;background:#69704a;color:#f6f6ee;font-size:30px;display:grid;place-items:center;cursor:pointer;transition:transform .2s ease}
-#works .portfolio-controls button:hover{transform:scale(1.06)}
-@media(max-height:800px) and (min-width:701px){#works #works_inner{padding-top:26px!important;padding-bottom:140px!important}#works #works_inner .work-card{height:470px!important}#works #works_inner .thumb-box{height:245px!important}#works .portfolio-bottom-deco{height:125px}#works .portfolio-controls{bottom:30px}#works .portfolio-controls button{width:62px;height:62px}}
-@media(max-width:700px){#works #works_inner{width:92vw!important;padding:35px 0 145px!important}#works #works_inner .work-card{height:480px!important}#works .portfolio-bottom-deco{left:-12%;right:-12%;height:110px}#works .portfolio-controls{bottom:28px;gap:50px}#works .portfolio-controls button{width:58px;height:58px;font-size:24px}}
-
-/* Portfolio sizing correction — match supplied mockup */
 #works #works_inner{
-  width:min(1215px,80vw)!important;
-  padding:28px 0 190px!important;
-}
-#works #works_inner .list{align-items:stretch!important}
-#works #works_inner .item{height:596px!important}
-#works #works_inner .work-card{
-  width:100%!important;
-  height:596px!important;
-  min-height:596px!important;
-  max-height:596px!important;
-  padding:20px!important;
-  border-radius:22px!important;
-}
-#works #works_inner .thumb-box{
-  height:300px!important;
-  min-height:300px!important;
-  max-height:300px!important;
-}
-#works #works_inner .meta-info{flex:1!important}
-#works .portfolio-bottom-deco{
-  left:3%!important;
-  right:3%!important;
-  bottom:4px!important;
-  height:175px!important;
-  align-items:flex-end!important;
-}
-#works .portfolio-bottom-deco .d1{width:24%!important;margin-right:-9%!important}
-#works .portfolio-bottom-deco .d2{width:20%!important;margin-right:-8%!important}
-#works .portfolio-bottom-deco .d3{width:24%!important;margin-right:-9%!important}
-#works .portfolio-bottom-deco .d4{width:20%!important;margin-right:-8%!important}
-#works .portfolio-bottom-deco .d5{width:20%!important;margin-right:-8%!important}
-#works .portfolio-bottom-deco .d6{width:24%!important}
-#works .portfolio-controls{bottom:38px!important}
-@media(max-height:800px) and (min-width:701px){
- #works #works_inner{padding-top:22px!important;padding-bottom:165px!important}
- #works #works_inner .item,#works #works_inner .work-card{height:500px!important;min-height:500px!important;max-height:500px!important}
- #works #works_inner .thumb-box{height:245px!important;min-height:245px!important;max-height:245px!important}
- #works .portfolio-bottom-deco{height:145px!important}
-}
-
-/* Portfolio correction v2 — restore mockup proportions and keep cards fully visible */
-#works #works_inner{
-  width:min(1210px,82vw)!important;
-  padding:55px 0 185px!important;
+  width:1200px!important;
+  max-width:84vw!important;
+  margin:0 auto!important;
+  padding:48px 0 165px!important;
   overflow:hidden!important;
+  box-sizing:border-box!important;
+  z-index:2;
 }
-#works #works_inner .list{align-items:stretch!important}
+#works #works_inner .list{display:flex!important;align-items:stretch!important}
 #works #works_inner .item{
-  height:510px!important;
-  min-height:510px!important;
-  max-height:510px!important;
+  height:450px!important;
+  min-height:450px!important;
+  max-height:450px!important;
+  box-sizing:border-box!important;
+  flex-shrink:0!important;
 }
 #works #works_inner .work-card{
+  display:block!important;
   width:100%!important;
-  height:510px!important;
-  min-height:510px!important;
-  max-height:510px!important;
+  height:450px!important;
+  min-height:450px!important;
+  max-height:450px!important;
+  margin:0!important;
   padding:20px!important;
-}
-#works #works_inner .thumb-box{
-  width:100%!important;
-  height:255px!important;
-  min-height:255px!important;
-  max-height:255px!important;
-}
-#works #works_inner .meta-info{
-  height:auto!important;
+  box-sizing:border-box!important;
   overflow:hidden!important;
+  border:0!important;
+  border-radius:22px!important;
+  background:#c4c29b!important;
+  box-shadow:none!important;
 }
-#works .portfolio-bottom-deco{
-  left:3%!important;
-  right:3%!important;
-  bottom:5px!important;
-  height:125px!important;
-  overflow:visible!important;
-}
-#works .portfolio-bottom-deco .d1{width:21%!important;margin-right:-7%!important}
-#works .portfolio-bottom-deco .d2{width:16%!important;margin-right:-5%!important}
-#works .portfolio-bottom-deco .d3{width:19%!important;margin-right:-6%!important}
-#works .portfolio-bottom-deco .d4{width:15%!important;margin-right:-5%!important}
-#works .portfolio-bottom-deco .d5{width:15%!important;margin-right:-5%!important}
-#works .portfolio-bottom-deco .d6{width:21%!important}
-#works .portfolio-controls{
-  bottom:28px!important;
-  gap:68px!important;
-}
-#works .portfolio-controls button{
-  width:64px!important;
-  height:64px!important;
-  font-size:25px!important;
-}
-@media(max-height:800px) and (min-width:701px){
- #works #works_inner{padding-top:34px!important;padding-bottom:145px!important}
- #works #works_inner .item,#works #works_inner .work-card{height:450px!important;min-height:450px!important;max-height:450px!important}
- #works #works_inner .thumb-box{height:220px!important;min-height:220px!important;max-height:220px!important}
- #works .portfolio-bottom-deco{height:105px!important}
- #works .portfolio-controls{bottom:22px!important}
- #works .portfolio-controls button{width:56px!important;height:56px!important}
-}
-
-/* Portfolio correction v3 — equal cards + smaller footer ornaments */
-#works #works_inner .item,
-#works #works_inner .work-card{
-  height:450px!important;
-  min-height:450px!important;
-  max-height:450px!important;
-}
-#works #works_inner .work-card{overflow:hidden!important}
 #works #works_inner .thumb-box{
+  display:block!important;
+  width:100%!important;
   height:220px!important;
   min-height:220px!important;
   max-height:220px!important;
+  margin:0!important;
+  box-sizing:border-box!important;
   overflow:hidden!important;
-}
-#works #works_inner .thumb-box img{
-  width:100%!important;
-  height:100%!important;
-  object-fit:cover!important;
-  object-position:center!important;
-}
-#works .portfolio-bottom-deco .d3{
-  width:13%!important;
-  max-height:92px!important;
-  margin-right:-3%!important;
-  transform:scaleX(-1)!important;
-}
-#works .portfolio-bottom-deco .d4{
-  width:12%!important;
-  max-height:88px!important;
-  margin-right:-3%!important;
-}
-#works .portfolio-bottom-deco .d6{
-  width:16%!important;
-  max-height:105px!important;
-}
-#works .portfolio-controls{bottom:22px!important;gap:68px!important}
-
-/* Portfolio final alignment — reference 2 footer composition */
-#works #works_inner .item,
-#works #works_inner .work-card{
-  height:450px!important;
-  min-height:450px!important;
-  max-height:450px!important;
-}
-#works #works_inner .thumb-box{
-  height:220px!important;
-  min-height:220px!important;
-  max-height:220px!important;
+  border-radius:20px!important;
   background:#fff!important;
 }
-#works #works_inner .thumb-box img[src=""],
-#works #works_inner .thumb-box img:not([src]){visibility:hidden!important}
-#works .portfolio-bottom-deco{
-  left:0!important;
-  right:0!important;
-  bottom:0!important;
-  height:118px!important;
-  width:100%!important;
-  justify-content:center!important;
-  align-items:flex-end!important;
-}
-#works .portfolio-bottom-deco .d1{width:22%!important;margin-right:-8%!important}
+#works #works_inner .thumb-box img{display:none!important}
+#works #works_inner .meta-info{margin-top:18px!important;color:#3e4230!important;overflow:hidden!important}
+#works #works_inner .top-row{display:flex!important;justify-content:space-between!important;align-items:center!important}
+#works #works_inner .project-title{font-family:"MapoDacapo","Pretendard Variable",Pretendard,sans-serif!important;font-size:24px!important;font-weight:400!important;margin:10px 0 5px!important}
+#works #works_inner .project-desc{font-size:12px!important;line-height:1.55!important}
+#works .portfolio-bottom-deco{position:absolute;left:0!important;right:0!important;bottom:0!important;width:100%!important;height:118px!important;z-index:3;display:flex!important;align-items:flex-end!important;justify-content:center!important;pointer-events:none}
+#works .portfolio-bottom-deco img{display:block;object-fit:contain;flex:0 0 auto}
+#works .portfolio-bottom-deco .d1{width:22%!important;margin-right:-8%!important;transform:scaleX(-1)}
 #works .portfolio-bottom-deco .d2{width:15%!important;margin-right:-5%!important}
-#works .portfolio-bottom-deco .d3{width:11%!important;max-height:78px!important;margin-right:-1.5%!important;transform:scaleX(-1)!important}
+#works .portfolio-bottom-deco .d3{width:11%!important;max-height:78px!important;margin-right:-1.5%!important;transform:scaleX(-1)}
 #works .portfolio-bottom-deco .d4{width:10%!important;max-height:72px!important;margin-right:-1.5%!important}
 #works .portfolio-bottom-deco .d5{width:14%!important;margin-right:-5%!important}
 #works .portfolio-bottom-deco .d6{width:20%!important;max-height:112px!important}
-#works .portfolio-controls{
-  left:50%!important;
-  bottom:22px!important;
-  transform:translateX(-50%)!important;
-  gap:34px!important;
-}
-#works .portfolio-controls button{
-  width:58px!important;
-  height:58px!important;
-  font-size:24px!important;
-}
-
-/* Portfolio viewport: always show exactly 3 complete cards on desktop */
+#works .portfolio-controls{position:absolute;left:50%!important;bottom:22px!important;transform:translateX(-50%)!important;z-index:5;display:flex!important;gap:34px!important}
+#works .portfolio-controls button{width:58px!important;height:58px!important;border:0!important;border-radius:50%!important;background:#69704a!important;color:#f6f6ee!important;font-size:24px!important;display:grid!important;place-items:center!important;cursor:pointer}
 @media(min-width:1100px){
-  #works #works_inner{
-    width:min(1215px,84vw)!important;
-    overflow:hidden!important;
-  }
-  #works #works_inner .list{overflow:visible!important}
-  #works #works_inner .item{
-    visibility:hidden;
-    opacity:0;
-    pointer-events:none;
-  }
-  #works #works_inner .item.swiper-slide-visible{
-    visibility:visible;
-    opacity:1;
-    pointer-events:auto;
-  }
+  #works #works_inner .item{width:calc((100% - 52px)/3)!important}
 }
-
-/* Portfolio exact 3-card viewport — no partial fourth card */
-@media(min-width:1100px){
-  #works #works_inner{
-    width:min(1215px,84vw)!important;
-    overflow:hidden!important;
-    box-sizing:border-box!important;
-  }
-  #works #works_inner .list{
-    overflow:visible!important;
-    align-items:stretch!important;
-  }
-  #works #works_inner .item{
-    visibility:visible!important;
-    opacity:1!important;
-    box-sizing:border-box!important;
-  }
-  #works #works_inner .item:not(.swiper-slide-visible){
-    visibility:hidden!important;
-  }
+@media(max-width:1099px) and (min-width:701px){
+  #works #works_inner{width:88vw!important;max-width:88vw!important}
 }
-
-/* Hard clip: exactly three portfolio cards visible at every carousel position */
-@media(min-width:1100px){
-  #works #works_inner{
-    width:min(1215px,84vw)!important;
-    overflow:hidden!important;
-    clip-path:inset(0)!important;
-  }
-  #works #works_inner .list{overflow:visible!important}
-  #works #works_inner .item{visibility:hidden!important;opacity:0!important;pointer-events:none!important}
-  #works #works_inner .item.swiper-slide-visible{
-    visibility:visible!important;
-    opacity:1!important;
-    pointer-events:auto!important;
-  }
-  #works #works_inner .item.swiper-slide-visible:nth-of-type(n){clip-path:none!important}
-}
-
-/* Portfolio card reset — identical width/height, no thumbnails */
-#works #works_inner .item{
-  height:450px!important;
-  min-height:450px!important;
-  max-height:450px!important;
-  box-sizing:border-box!important;
-}
-#works #works_inner .work-card{
-  width:100%!important;
-  height:450px!important;
-  min-height:450px!important;
-  max-height:450px!important;
-  box-sizing:border-box!important;
-  overflow:hidden!important;
-}
-#works #works_inner .thumb-box{
-  width:100%!important;
-  height:220px!important;
-  min-height:220px!important;
-  max-height:220px!important;
-  box-sizing:border-box!important;
-  background:#fff!important;
-  overflow:hidden!important;
-}
-#works #works_inner .thumb-box img{display:none!important}
-@media(min-width:1100px){
-  #works #works_inner .item{
-    width:calc((100% - 52px)/3)!important;
-    flex:0 0 calc((100% - 52px)/3)!important;
-  }
+@media(max-width:700px){
+  #works #works_inner{width:92vw!important;max-width:92vw!important;padding-bottom:145px!important}
+  #works #works_inner .item,#works #works_inner .work-card{height:450px!important}
+  #works .portfolio-bottom-deco{height:105px!important}
 }
