@@ -1046,3 +1046,40 @@ header.site-header #gnb .btn.active::before{
   bottom:58px!important;
   z-index:6!important;
 }
+
+/* Portfolio controls — large soft arrows nested into the center vine curls */
+#works .portfolio-controls{
+  left:50%!important;
+  bottom:28px!important;
+  transform:translateX(-50%)!important;
+  gap:18px!important;
+  z-index:6!important;
+}
+#works .portfolio-controls button{
+  position:relative!important;
+  width:72px!important;
+  height:72px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:50%!important;
+  background:#747a50!important;
+  color:transparent!important;
+  font-size:0!important;
+  overflow:hidden!important;
+}
+#works .portfolio-controls button::before{
+  content:""!important;
+  position:absolute!important;
+  top:50%!important;
+  left:50%!important;
+  width:25px!important;
+  height:31px!important;
+  transform:translate(-50%,-50%)!important;
+  background:#f6f6ee!important;
+}
+#works .portfolio-controls .portfolio-prev::before{
+  clip-path:path("M 24 2 C 25 1 26 2 26 4 L 26 27 C 26 30 23 31 21 29 L 3 18 C 1 17 1 14 3 13 Z")!important;
+}
+#works .portfolio-controls .portfolio-next::before{
+  clip-path:path("M 2 2 C 1 1 0 2 0 4 L 0 27 C 0 30 3 31 5 29 L 23 18 C 25 17 25 14 23 13 Z")!important;
+}
