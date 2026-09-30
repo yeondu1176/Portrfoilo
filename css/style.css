@@ -1279,3 +1279,44 @@ header.site-header #gnb .btn.active::before{
   position:relative!important;
   top:20px!important;
 }
+
+
+/* Botanical decoration around portfolio search */
+#works .portfolio-search{overflow:visible!important}
+#works .portfolio-search input,
+#works .portfolio-search-button{position:relative;z-index:3}
+#works .search-deco{
+  position:absolute!important;
+  display:block!important;
+  object-fit:contain!important;
+  pointer-events:none!important;
+  user-select:none!important;
+  z-index:2!important;
+}
+#works .search-deco-branch{
+  width:145px!important;
+  height:auto!important;
+  left:-92px!important;
+  top:-53px!important;
+  transform:rotate(-7deg)!important;
+}
+#works .search-deco-tree{
+  width:112px!important;
+  height:auto!important;
+  right:-69px!important;
+  top:-47px!important;
+  transform:rotate(8deg)!important;
+}
+#works .search-deco-leaf{
+  width:52px!important;
+  height:auto!important;
+  left:46%!important;
+  top:-43px!important;
+  transform:rotate(-13deg)!important;
+  opacity:.9!important;
+}
+@media(max-width:700px){
+  #works .search-deco-branch{width:105px!important;left:-52px!important;top:-38px!important}
+  #works .search-deco-tree{width:82px!important;right:-38px!important;top:-34px!important}
+  #works .search-deco-leaf{width:38px!important;top:-31px!important}
+}
