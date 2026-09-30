@@ -1116,7 +1116,7 @@ header.site-header #gnb .btn.active::before{
 
 /* Portfolio footer placement — visually nest controls into the curled leaves */
 #works .portfolio-bottom-deco{
-  left:calc(50% - 10px)!important;
+  left:calc(50% - 50px)!important;
   right:auto!important;
   width:92%!important;
   transform:translateX(-50%)!important;
