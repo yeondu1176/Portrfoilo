@@ -1274,7 +1274,8 @@ header.site-header #gnb .btn.active::before{
 
 
 
-/* Portfolio card list position only — search stays fixed */
-#works #works_inner .list{
-  transform:translateY(20px)!important;
+/* Portfolio card position only — keep Swiper transform free for navigation */
+#works #works_inner .item{
+  position:relative!important;
+  top:20px!important;
 }
