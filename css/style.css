@@ -124,9 +124,7 @@ header #gnb .btn.active {
   transition: all 0.4s ease-out 0.5s;
 }
 
-#about {
-  background: #c3ffde;
-}
+#about {\n  background: #f7f4ef;\n}
 
 #works {
   background-color: #f7f5f0;
@@ -329,3 +327,165 @@ header #gnb .btn.active {
 .fancybox__backdrop {
   background: rgba(0, 0, 0, 0.5333333333);
 }/*# sourceMappingURL=style.css.map */
+
+/* About — Figma frame 1:508 */
+#about {
+  background: #f7f4ef;
+  color: #372820;
+  overflow: hidden;
+  align-items: center;
+}
+#about .about-profile {
+  width: 100%;
+  height: min(596px, calc(100vh - 60px));
+  min-height: 520px;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(260px, 40.625%) minmax(0, 1fr) 162px;
+  margin-top: 60px;
+}
+#about .about-intro {
+  width: 377px;
+  max-width: calc(100% - 48px);
+  justify-self: end;
+  margin-right: 104px;
+  padding-top: 72px;
+  box-sizing: border-box;
+}
+#about .about-eyebrow {
+  font-size: 13px;
+  letter-spacing: 2.6px;
+  color: #8a786b;
+  line-height: 1;
+  margin-bottom: 22px;
+}
+#about .about-name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(72px, 4.97vw, 95.4px);
+  line-height: .927;
+  letter-spacing: -.32px;
+  font-weight: 400;
+  margin: 0 0 28px;
+  color: #372820;
+}
+#about .about-name span { display: block; }
+#about .about-lead {
+  font-size: 17px;
+  line-height: 27.2px;
+  letter-spacing: -.32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+#about .about-desc {
+  font-size: 14px;
+  line-height: 24.5px;
+  letter-spacing: -.32px;
+  color: #675d56;
+}
+#about .about-signature { margin-top: 38px; }
+#about .about-signature-line {
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: #aa9b91;
+  margin-bottom: 22px;
+}
+#about .about-signature p {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 12.7px;
+  line-height: 21.75px;
+  letter-spacing: -.32px;
+  color: #8a7f78;
+}
+#about .about-hero {
+  height: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: #e8e2da;
+}
+#about .about-hero img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+#about .about-image-missing {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 3vw, 58px);
+  letter-spacing: .08em;
+  color: rgba(55,40,32,.22);
+  background: linear-gradient(135deg,#e9e3dc,#d8cec4);
+}
+#about .about-section-nav {
+  padding: 76px 0 0 34px;
+  box-sizing: border-box;
+}
+#about .about-section-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  margin-bottom: 28px;
+  color: #776c64;
+}
+#about .about-section-link small {
+  font-size: 10px;
+  line-height: 1;
+  color: #8e7c70;
+}
+#about .about-section-link span {
+  font-size: 11px;
+  line-height: 1;
+  padding-bottom: 8px;
+  border-bottom: 1px solid transparent;
+  transition: border-color .25s ease, color .25s ease;
+}
+#about .about-section-link:hover span {
+  color: #372820;
+  border-bottom-color: #aa9b91;
+}
+@media (max-width: 1200px) {
+  #about .about-profile { grid-template-columns: 42% 1fr 120px; }
+  #about .about-intro { margin-right: 48px; }
+  #about .about-section-nav { padding-left: 24px; }
+}
+@media (max-width: 820px) {
+  #about { overflow-y: auto; }
+  #about .about-profile {
+    height: auto;
+    min-height: calc(100vh - 60px);
+    grid-template-columns: 1fr;
+    padding: 56px 28px 40px;
+    box-sizing: border-box;
+  }
+  #about .about-intro {
+    width: 100%;
+    max-width: 100%;
+    justify-self: stretch;
+    margin: 0;
+    padding: 0;
+  }
+  #about .about-name { font-size: clamp(64px, 20vw, 92px); }
+  #about .about-hero {
+    height: 46vh;
+    min-height: 320px;
+    margin-top: 44px;
+  }
+  #about .about-section-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    padding: 30px 0 0;
+  }
+  #about .about-section-link { margin: 0; }
+}
+@media (max-width: 520px) {
+  #about .about-profile { padding-inline: 20px; }
+  #about .about-desc br { display: none; }
+  #about .about-section-nav { grid-template-columns: repeat(2, 1fr); }
+}
