@@ -1109,3 +1109,22 @@ header.site-header #gnb .btn.active::before{
   height:58px!important;
   font-size:24px!important;
 }
+
+/* Portfolio viewport: always show exactly 3 complete cards on desktop */
+@media(min-width:1100px){
+  #works #works_inner{
+    width:min(1215px,84vw)!important;
+    overflow:hidden!important;
+  }
+  #works #works_inner .list{overflow:visible!important}
+  #works #works_inner .item{
+    visibility:hidden;
+    opacity:0;
+    pointer-events:none;
+  }
+  #works #works_inner .item.swiper-slide-visible{
+    visibility:visible;
+    opacity:1;
+    pointer-events:auto;
+  }
+}
