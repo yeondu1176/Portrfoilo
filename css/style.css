@@ -1030,3 +1030,40 @@ header.site-header #gnb .btn.active::before{
  #works .portfolio-controls{bottom:22px!important}
  #works .portfolio-controls button{width:56px!important;height:56px!important}
 }
+
+/* Portfolio correction v3 — equal cards + smaller footer ornaments */
+#works #works_inner .item,
+#works #works_inner .work-card{
+  height:450px!important;
+  min-height:450px!important;
+  max-height:450px!important;
+}
+#works #works_inner .work-card{overflow:hidden!important}
+#works #works_inner .thumb-box{
+  height:220px!important;
+  min-height:220px!important;
+  max-height:220px!important;
+  overflow:hidden!important;
+}
+#works #works_inner .thumb-box img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+#works .portfolio-bottom-deco .d3{
+  width:13%!important;
+  max-height:92px!important;
+  margin-right:-3%!important;
+  transform:scaleX(-1)!important;
+}
+#works .portfolio-bottom-deco .d4{
+  width:12%!important;
+  max-height:88px!important;
+  margin-right:-3%!important;
+}
+#works .portfolio-bottom-deco .d6{
+  width:16%!important;
+  max-height:105px!important;
+}
+#works .portfolio-controls{bottom:22px!important;gap:68px!important}
