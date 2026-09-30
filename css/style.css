@@ -1357,3 +1357,32 @@ header.site-header #gnb .btn.active::before{
   top:-30px!important;
   opacity:.95!important;
 }
+
+
+/* Portfolio search composition refinement */
+#works .portfolio-search{
+  top:62px!important;
+}
+#works .search-deco{
+  filter:none!important;
+  opacity:1!important;
+}
+#works .search-deco-branch{
+  width:132px!important;
+  left:-88px!important;
+  top:-18px!important;
+  transform:rotate(-4deg)!important;
+}
+#works .search-deco-tree{
+  width:108px!important;
+  right:-68px!important;
+  top:-23px!important;
+  transform:rotate(5deg)!important;
+}
+#works .search-deco-leaf{
+  width:44px!important;
+  left:48%!important;
+  top:-22px!important;
+  transform:translateX(-50%) rotate(-10deg)!important;
+  opacity:1!important;
+}
