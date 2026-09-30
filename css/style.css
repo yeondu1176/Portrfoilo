@@ -901,3 +901,30 @@ header.site-header #gnb .btn.active::before{
   font-size:17px!important;
   color:#7d8859!important;
 }
+
+/* Portfolio 3-card infinite carousel */
+#works{position:relative!important;overflow:hidden!important;background:#f6f6ee!important;background-image:none!important;padding-top:76px!important;box-sizing:border-box!important}
+#works .work-header{display:none!important}
+#works #works_inner{width:min(1215px,78vw)!important;padding:48px 0 175px!important;overflow:hidden!important;box-sizing:border-box!important;z-index:2}
+#works #works_inner .list{display:flex!important;align-items:center!important}
+#works #works_inner .item{width:auto!important;flex-shrink:0!important}
+#works #works_inner .work-card{height:530px!important;box-sizing:border-box!important;padding:20px!important;border:0!important;border-radius:22px!important;background:#c4c29b!important;box-shadow:none!important;overflow:hidden!important}
+#works #works_inner .work-card:hover{transform:none!important}
+#works #works_inner .thumb-box{width:100%!important;height:285px!important;aspect-ratio:auto!important;border-radius:20px!important;background:#fff!important}
+#works #works_inner .thumb-box img{width:100%!important;height:100%!important;object-fit:cover!important;border-radius:20px!important}
+#works #works_inner .meta-info{margin-top:18px!important;color:#3e4230!important}
+#works #works_inner .project-title{font-family:"MapoDacapo","Pretendard Variable",Pretendard,sans-serif!important;font-size:24px!important;font-weight:400!important;margin:10px 0 5px!important}
+#works #works_inner .project-desc{font-size:12px!important;line-height:1.55!important}
+#works .portfolio-bottom-deco{position:absolute;left:2.5%;right:2.5%;bottom:10px;height:155px;z-index:3;display:flex;align-items:flex-end;justify-content:center;pointer-events:none}
+#works .portfolio-bottom-deco img{position:relative;display:block;object-fit:contain;flex:0 0 auto}
+#works .portfolio-bottom-deco .d1{width:20%;transform:scaleX(-1);margin-right:-6%}
+#works .portfolio-bottom-deco .d2{width:19%;margin-right:-7%}
+#works .portfolio-bottom-deco .d3{width:21%;transform:scaleX(-1);margin-right:-7%}
+#works .portfolio-bottom-deco .d4{width:18%;margin-right:-7%}
+#works .portfolio-bottom-deco .d5{width:18%;margin-right:-6%}
+#works .portfolio-bottom-deco .d6{width:22%}
+#works .portfolio-controls{position:absolute;left:50%;bottom:42px;transform:translateX(-50%);z-index:5;display:flex;gap:72px}
+#works .portfolio-controls button{width:72px;height:72px;border:0;border-radius:50%;background:#69704a;color:#f6f6ee;font-size:30px;display:grid;place-items:center;cursor:pointer;transition:transform .2s ease}
+#works .portfolio-controls button:hover{transform:scale(1.06)}
+@media(max-height:800px) and (min-width:701px){#works #works_inner{padding-top:26px!important;padding-bottom:140px!important}#works #works_inner .work-card{height:470px!important}#works #works_inner .thumb-box{height:245px!important}#works .portfolio-bottom-deco{height:125px}#works .portfolio-controls{bottom:30px}#works .portfolio-controls button{width:62px;height:62px}}
+@media(max-width:700px){#works #works_inner{width:92vw!important;padding:35px 0 145px!important}#works #works_inner .work-card{height:480px!important}#works .portfolio-bottom-deco{left:-12%;right:-12%;height:110px}#works .portfolio-controls{bottom:28px;gap:50px}#works .portfolio-controls button{width:58px;height:58px;font-size:24px}}
