@@ -27,9 +27,9 @@ function initWorksSwiper() {
   if (!works.querySelector('.portfolio-bottom-deco')) works.insertAdjacentHTML('beforeend', `
     <div class="portfolio-bottom-deco" aria-hidden="true"><img class="portfolio-footer-art" src="./images/사이트 페이지.png" alt=""></div><div class="portfolio-controls"><button class="portfolio-prev" type="button" aria-label="이전 작품">◀</button><button class="portfolio-next" type="button" aria-label="다음 작품">▶</button></div>`);
   works_swiper = new Swiper('#works_inner', {
-    wrapperClass:"list", slideClass:"item", slidesPerView:"auto", slidesPerGroup:1, spaceBetween:26, centeredSlides:false, loop:true, speed:700, nested:true, watchSlidesProgress:true,
+    wrapperClass:"list", slideClass:"item", slidesPerView:"auto", slidesPerGroup:1, spaceBetween:15, centeredSlides:false, loop:true, speed:700, nested:true, watchSlidesProgress:true,
     navigation:{nextEl:".portfolio-next",prevEl:".portfolio-prev"},
-    breakpoints:{0:{slidesPerView:"auto",spaceBetween:14},700:{slidesPerView:"auto",spaceBetween:20},1100:{slidesPerView:"auto",spaceBetween:26}}
+    breakpoints:{0:{slidesPerView:"auto",spaceBetween:14},700:{slidesPerView:"auto",spaceBetween:20},1100:{slidesPerView:"auto",spaceBetween:15}}
   });
 }
 
