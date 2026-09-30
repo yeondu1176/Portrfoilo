@@ -1,3 +1,11 @@
-
 /*프리탠다드*/
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+/* 마포 다카포 */
+@font-face {
+  font-family: "MapoDacapo";
+  src: url("./MapoDacapo.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
