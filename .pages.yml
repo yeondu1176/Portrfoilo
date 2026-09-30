@@ -52,11 +52,14 @@ content:
     type: collection
     path: content/guestbook
     format: json
+    filename: "{year}-{month}-{day}-{hour}-{minute}-{second}-{name}.json"
     view:
       primary: name
       fields: [name, createdAt, approved]
-      sort: createdAt
-      order: desc
+      sort: [createdAt, name]
+      default:
+        sort: createdAt
+        order: desc
     fields:
       - { name: name, label: 이름, type: string, required: true, options: { maxlength: 40 } }
       - { name: message, label: 메시지, type: text, required: true, options: { maxlength: 500 } }
