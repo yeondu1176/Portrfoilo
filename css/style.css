@@ -1008,3 +1008,21 @@ header.site-header #gnb .btn.active::before{
   min-height:450px!important;
   max-height:450px!important;
 }
+
+/* Portfolio footer: use the single supplied composite artwork */
+#works .portfolio-bottom-deco{
+  left:0!important;right:0!important;bottom:0!important;
+  width:100%!important;height:auto!important;
+  display:block!important;overflow:hidden!important;
+  pointer-events:none!important;
+}
+#works .portfolio-bottom-deco .portfolio-footer-art{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:none!important;
+  margin:0!important;
+  transform:none!important;
+  object-fit:contain!important;
+}
+#works .portfolio-bottom-deco img:not(.portfolio-footer-art){display:none!important}
