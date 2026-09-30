@@ -928,3 +928,45 @@ header.site-header #gnb .btn.active::before{
 #works .portfolio-controls button:hover{transform:scale(1.06)}
 @media(max-height:800px) and (min-width:701px){#works #works_inner{padding-top:26px!important;padding-bottom:140px!important}#works #works_inner .work-card{height:470px!important}#works #works_inner .thumb-box{height:245px!important}#works .portfolio-bottom-deco{height:125px}#works .portfolio-controls{bottom:30px}#works .portfolio-controls button{width:62px;height:62px}}
 @media(max-width:700px){#works #works_inner{width:92vw!important;padding:35px 0 145px!important}#works #works_inner .work-card{height:480px!important}#works .portfolio-bottom-deco{left:-12%;right:-12%;height:110px}#works .portfolio-controls{bottom:28px;gap:50px}#works .portfolio-controls button{width:58px;height:58px;font-size:24px}}
+
+/* Portfolio sizing correction — match supplied mockup */
+#works #works_inner{
+  width:min(1215px,80vw)!important;
+  padding:28px 0 190px!important;
+}
+#works #works_inner .list{align-items:stretch!important}
+#works #works_inner .item{height:596px!important}
+#works #works_inner .work-card{
+  width:100%!important;
+  height:596px!important;
+  min-height:596px!important;
+  max-height:596px!important;
+  padding:20px!important;
+  border-radius:22px!important;
+}
+#works #works_inner .thumb-box{
+  height:300px!important;
+  min-height:300px!important;
+  max-height:300px!important;
+}
+#works #works_inner .meta-info{flex:1!important}
+#works .portfolio-bottom-deco{
+  left:3%!important;
+  right:3%!important;
+  bottom:4px!important;
+  height:175px!important;
+  align-items:flex-end!important;
+}
+#works .portfolio-bottom-deco .d1{width:24%!important;margin-right:-9%!important}
+#works .portfolio-bottom-deco .d2{width:20%!important;margin-right:-8%!important}
+#works .portfolio-bottom-deco .d3{width:24%!important;margin-right:-9%!important}
+#works .portfolio-bottom-deco .d4{width:20%!important;margin-right:-8%!important}
+#works .portfolio-bottom-deco .d5{width:20%!important;margin-right:-8%!important}
+#works .portfolio-bottom-deco .d6{width:24%!important}
+#works .portfolio-controls{bottom:38px!important}
+@media(max-height:800px) and (min-width:701px){
+ #works #works_inner{padding-top:22px!important;padding-bottom:165px!important}
+ #works #works_inner .item,#works #works_inner .work-card{height:500px!important;min-height:500px!important;max-height:500px!important}
+ #works #works_inner .thumb-box{height:245px!important;min-height:245px!important;max-height:245px!important}
+ #works .portfolio-bottom-deco{height:145px!important}
+}
