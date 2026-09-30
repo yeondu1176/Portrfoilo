@@ -494,3 +494,49 @@ header #gnb .btn.active {
 #contact #guestbook-status{min-height:22px;font-size:11px;color:#59633f}
 #contact .guestbook-hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
 @media(max-width:700px){#contact{padding:80px 25px 40px;overflow-y:auto!important;align-items:flex-start!important}#contact .contact-inner{grid-template-columns:1fr;gap:42px}.contact-copy h2{font-size:48px!important}}
+
+
+/* About viewport fit refinements */
+#about .about-page{
+  padding-top:clamp(105px,13.5vh,135px);
+  padding-bottom:24px;
+}
+#about .about-title-area{
+  top:17%;
+  transform:scale(.86);
+  transform-origin:left top;
+}
+#about .about-vine{display:none}
+#about .about-vine-image{
+  display:block;
+  width:100%;
+  max-width:300px;
+  height:auto;
+  margin-top:8px;
+  object-fit:contain;
+  object-position:left top;
+}
+#about .about-content{
+  width:min(820px,100%);
+  transform:scale(.88);
+  transform-origin:left top;
+}
+#about .about-heading-row{margin-bottom:24px}
+#about .about-profile-list{row-gap:13px;margin-bottom:18px}
+#about .about-profile-block>h4{margin:4px 0 13px}
+#about .about-tools{gap:22px;margin-bottom:24px}
+#about .about-tool img,#about .premiere-fallback{width:38px;height:38px}
+#about .premiere-fallback{font-size:20px;line-height:38px}
+#about .about-skills-block{margin-top:2px}
+#about .about-skills-block .about-heading-row{margin-bottom:29px}
+#about .about-skill-group{margin-bottom:19px}
+
+@media(max-width:1100px){
+  #about .about-title-area{transform:scale(.78)}
+  #about .about-content{transform:scale(.82);transform-origin:left top;width:900px}
+}
+@media(max-width:760px){
+  #about .about-title-area{transform:none}
+  #about .about-content{transform:none;width:100%}
+  #about .about-vine-image{width:220px}
+}
