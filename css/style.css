@@ -1166,3 +1166,35 @@ header.site-header #gnb .btn.active::before{
   }
   #works #works_inner .item.swiper-slide-visible:nth-of-type(n){clip-path:none!important}
 }
+
+/* Portfolio card reset — identical width/height, no thumbnails */
+#works #works_inner .item{
+  height:450px!important;
+  min-height:450px!important;
+  max-height:450px!important;
+  box-sizing:border-box!important;
+}
+#works #works_inner .work-card{
+  width:100%!important;
+  height:450px!important;
+  min-height:450px!important;
+  max-height:450px!important;
+  box-sizing:border-box!important;
+  overflow:hidden!important;
+}
+#works #works_inner .thumb-box{
+  width:100%!important;
+  height:220px!important;
+  min-height:220px!important;
+  max-height:220px!important;
+  box-sizing:border-box!important;
+  background:#fff!important;
+  overflow:hidden!important;
+}
+#works #works_inner .thumb-box img{display:none!important}
+@media(min-width:1100px){
+  #works #works_inner .item{
+    width:calc((100% - 52px)/3)!important;
+    flex:0 0 calc((100% - 52px)/3)!important;
+  }
+}
