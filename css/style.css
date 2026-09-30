@@ -1273,7 +1273,8 @@ header.site-header #gnb .btn.active::before{
 }
 
 
-/* Portfolio cards position only — move down 20px */
-#works #works_inner{
+
+/* Portfolio card list position only — search stays fixed */
+#works #works_inner .list{
   transform:translateY(20px)!important;
 }
