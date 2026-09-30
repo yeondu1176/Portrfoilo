@@ -970,3 +970,63 @@ header.site-header #gnb .btn.active::before{
  #works #works_inner .thumb-box{height:245px!important;min-height:245px!important;max-height:245px!important}
  #works .portfolio-bottom-deco{height:145px!important}
 }
+
+/* Portfolio correction v2 — restore mockup proportions and keep cards fully visible */
+#works #works_inner{
+  width:min(1210px,82vw)!important;
+  padding:55px 0 185px!important;
+  overflow:hidden!important;
+}
+#works #works_inner .list{align-items:stretch!important}
+#works #works_inner .item{
+  height:510px!important;
+  min-height:510px!important;
+  max-height:510px!important;
+}
+#works #works_inner .work-card{
+  width:100%!important;
+  height:510px!important;
+  min-height:510px!important;
+  max-height:510px!important;
+  padding:20px!important;
+}
+#works #works_inner .thumb-box{
+  width:100%!important;
+  height:255px!important;
+  min-height:255px!important;
+  max-height:255px!important;
+}
+#works #works_inner .meta-info{
+  height:auto!important;
+  overflow:hidden!important;
+}
+#works .portfolio-bottom-deco{
+  left:3%!important;
+  right:3%!important;
+  bottom:5px!important;
+  height:125px!important;
+  overflow:visible!important;
+}
+#works .portfolio-bottom-deco .d1{width:21%!important;margin-right:-7%!important}
+#works .portfolio-bottom-deco .d2{width:16%!important;margin-right:-5%!important}
+#works .portfolio-bottom-deco .d3{width:19%!important;margin-right:-6%!important}
+#works .portfolio-bottom-deco .d4{width:15%!important;margin-right:-5%!important}
+#works .portfolio-bottom-deco .d5{width:15%!important;margin-right:-5%!important}
+#works .portfolio-bottom-deco .d6{width:21%!important}
+#works .portfolio-controls{
+  bottom:28px!important;
+  gap:68px!important;
+}
+#works .portfolio-controls button{
+  width:64px!important;
+  height:64px!important;
+  font-size:25px!important;
+}
+@media(max-height:800px) and (min-width:701px){
+ #works #works_inner{padding-top:34px!important;padding-bottom:145px!important}
+ #works #works_inner .item,#works #works_inner .work-card{height:450px!important;min-height:450px!important;max-height:450px!important}
+ #works #works_inner .thumb-box{height:220px!important;min-height:220px!important;max-height:220px!important}
+ #works .portfolio-bottom-deco{height:105px!important}
+ #works .portfolio-controls{bottom:22px!important}
+ #works .portfolio-controls button{width:56px!important;height:56px!important}
+}
