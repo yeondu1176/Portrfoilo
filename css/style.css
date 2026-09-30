@@ -1421,3 +1421,20 @@ header.site-header #gnb .btn.active::before{
   #works .search-deco-leaf-left{width:27px!important;left:22%!important;top:-24px!important}
   #works .search-deco-leaf-right{width:25px!important;right:22%!important;top:-23px!important}
 }
+
+
+/* Clean search decoration: keep the field clear, decorate below only */
+#works .search-deco-vine,
+#works .search-deco-leaf-left,
+#works .search-deco-leaf-right{display:none!important}
+#works .search-deco-under{
+  display:block!important;
+  width:190px!important;
+  height:auto!important;
+  left:50%!important;
+  top:48px!important;
+  transform:translateX(-50%) rotate(180deg)!important;
+  opacity:.72!important;
+  z-index:19!important;
+  pointer-events:none!important;
+}
