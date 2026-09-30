@@ -39,6 +39,50 @@ function escapeHtml(value = "") {
   }[char]));
 }
 
+function normalizePortfolioSearch(value = "") {
+  return String(value).toLocaleLowerCase("ko-KR").replace(/\s+/g, " ").trim();
+}
+
+function setupPortfolioSearch(allWorks, list) {
+  const input = document.getElementById("portfolio-search-input");
+  if (!input) return;
+
+  const render = (query = "") => {
+    const term = normalizePortfolioSearch(query);
+    const filtered = term
+      ? allWorks.filter(work => normalizePortfolioSearch([
+          work.title, work.category, work.description,
+          ...(Array.isArray(work.keywords) ? work.keywords : [])
+        ].filter(Boolean).join(" ")).includes(term))
+      : allWorks;
+
+    list.innerHTML = filtered.map((work) => {
+      const originalIndex = allWorks.indexOf(work);
+      const href = work.detailPage ? escapeHtml(work.detailPage) : '#';
+      const fancybox = work.detailPage ? 'data-fancybox="portfolio" data-type="iframe"' : '';
+      return `<div class="item">
+        <a href="${href}" class="work-card" ${fancybox}>
+          <div class="thumb-box"><img src="${escapeHtml(work.thumbnail)}" alt="${escapeHtml(work.title)}"></div>
+          <div class="meta-info">
+            <div class="top-row">
+              <span class="index-num">No. ${String(originalIndex + 1).padStart(2, '0')}</span>
+              <span class="category-stamp">${escapeHtml(work.category)}</span>
+            </div>
+            <h3 class="project-title">${escapeHtml(work.title)}</h3>
+            <p class="project-desc">${escapeHtml(work.description)}</p>
+          </div>
+        </a>
+      </div>`;
+    }).join('');
+
+    initWorksSwiper();
+    Fancybox.bind("[data-fancybox]", {});
+    setupPortfolioSearch(works, list);
+  };
+
+  input.addEventListener("input", event => render(event.target.value));
+}
+
 async function loadWorks() {
   const list = document.querySelector('#works_inner .list');
   try {
