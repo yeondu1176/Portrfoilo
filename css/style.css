@@ -1250,3 +1250,9 @@ header.site-header #gnb .btn.active::before{
 }
 #works .portfolio-search-button:hover{filter:brightness(.96)}
 #works .portfolio-search-button:active{transform:translateY(-50%) scale(.96)!important}
+
+
+/* Keep portfolio cards at their pre-search vertical position */
+#works #works_inner{
+  margin-top:-70px!important;
+}
