@@ -874,3 +874,30 @@ header.site-header #gnb .btn.active::before{
   font-size:13px;
   color:#8a9568;
 }
+
+
+/* About sparkle placement — match the approved visual reference */
+#about .about-spark-1{
+  left:-2px!important;
+  top:-34px!important;
+  font-size:30px!important;
+  color:#768052!important;
+}
+#about .about-spark-2{
+  left:70%!important;
+  top:48%!important;
+  font-size:25px!important;
+  color:#68734b!important;
+}
+#about .about-spark-3{
+  left:-10%!important;
+  top:55%!important;
+  font-size:34px!important;
+  color:#9aa56c!important;
+}
+#about .about-spark-4{
+  left:17%!important;
+  top:-18px!important;
+  font-size:17px!important;
+  color:#7d8859!important;
+}
