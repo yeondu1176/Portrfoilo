@@ -77,7 +77,6 @@ function setupPortfolioSearch(allWorks, list) {
 
     initWorksSwiper();
     Fancybox.bind("[data-fancybox]", {});
-    setupPortfolioSearch(works, list);
   };
 
   const button = document.querySelector(".portfolio-search-button");
@@ -122,6 +121,7 @@ async function loadWorks() {
 
     initWorksSwiper();
     Fancybox.bind("[data-fancybox]", {});
+    setupPortfolioSearch(works, list);
   } catch (error) {
     console.warn('CMS 작품 데이터를 불러오지 못해 기존 카드 마크업을 사용합니다.', error);
     initWorksSwiper();
