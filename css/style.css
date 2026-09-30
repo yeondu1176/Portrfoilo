@@ -1196,3 +1196,33 @@ header.site-header #gnb .btn.active::before{
 @media(max-width:700px){
   #works .portfolio-search{width:300px;margin-bottom:-28px}
 }
+
+
+/* Portfolio viewport: exactly 4 fixed cards on desktop */
+@media(min-width:1100px){
+  #works #works_inner{
+    width:1165px!important; /* 280px × 4 + 15px × 3 */
+    max-width:calc(100vw - 40px)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    overflow:hidden!important;
+  }
+}
+
+/* Portfolio search — clearly visible above the cards */
+#works .portfolio-search{
+  position:relative!important;
+  display:block!important;
+  width:420px!important;
+  max-width:calc(100% - 40px)!important;
+  margin:0 auto 24px!important;
+  z-index:20!important;
+}
+#works .portfolio-search input{
+  display:block!important;
+  width:100%!important;
+  height:50px!important;
+  background:#fff!important;
+  border:2px solid #96a345!important;
+  box-shadow:0 6px 18px rgba(78,88,46,.12)!important;
+}
