@@ -983,3 +983,28 @@ header.site-header #gnb .btn.active::before{
   #works #works_inner .item,#works #works_inner .work-card{height:450px!important}
   #works .portfolio-bottom-deco{height:105px!important}
 }
+
+/* Portfolio thumbnails: any source image keeps the fixed card layout */
+#works #works_inner .thumb-box{
+  width:100%!important;
+  height:220px!important;
+  min-height:220px!important;
+  max-height:220px!important;
+  overflow:hidden!important;
+  flex:none!important;
+}
+#works #works_inner .thumb-box img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  min-width:100%!important;
+  min-height:100%!important;
+  max-width:none!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+#works #works_inner .work-card{
+  height:450px!important;
+  min-height:450px!important;
+  max-height:450px!important;
+}
