@@ -807,3 +807,20 @@ header.site-header #gnb .btn.active::before{
   height:44px!important;
   top:0!important;
 }
+
+
+/* About title branch alignment — match the original mockup */
+#about .about-vine-image{
+  width:118%!important;
+  max-width:320px!important;
+  max-height:135px!important;
+  margin-top:-22px!important;
+  margin-left:-6px!important;
+}
+@media(max-height:760px) and (min-width:761px){
+  #about .about-vine-image{
+    width:108%!important;
+    max-height:112px!important;
+    margin-top:-18px!important;
+  }
+}
