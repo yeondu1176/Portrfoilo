@@ -1114,25 +1114,25 @@ header.site-header #gnb .btn.active::before{
   clip-path:polygon(12% 5%,12% 95%,90% 50%)!important;
 }
 
-/* Portfolio footer placement — match approved reference */
+/* Portfolio footer placement — align arrows with the curled center leaves */
 #works .portfolio-bottom-deco{
-  left:46%!important;
+  left:50%!important;
   right:auto!important;
   width:92%!important;
   transform:translateX(-50%)!important;
 }
 #works .portfolio-controls{
-  left:43%!important;
-  bottom:52px!important;
+  left:50%!important;
+  bottom:68px!important;
   transform:translateX(-50%)!important;
-  gap:18px!important;
+  gap:14px!important;
 }
 #works .portfolio-controls button{
-  width:82px!important;
-  height:82px!important;
+  width:78px!important;
+  height:78px!important;
 }
 #works .portfolio-controls button::before{
-  width:31px!important;
-  height:36px!important;
+  width:29px!important;
+  height:34px!important;
   border-radius:7px!important;
 }
