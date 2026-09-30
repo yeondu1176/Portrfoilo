@@ -376,3 +376,20 @@ header #gnb .btn.active {
 @media(max-width:700px){#about .about-top{height:auto;display:grid;grid-template-columns:1fr}.about-section-nav{display:none}#about .about-intro{padding:50px 25px!important}#about .about-hero{height:52vh}#about .about-bottom{grid-template-columns:1fr;padding-top:30px}.about-name{font-size:72px!important}}
 
 #about .more-visual img{width:100%;height:100%;display:block;object-fit:cover}
+
+/* Contact / Guestbook: 기존 연두색 CONTACT 배경과 전체 페이지 구조 유지 */
+#contact{padding:60px 8%;box-sizing:border-box}
+#contact .contact-inner{width:min(980px,100%);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+#contact .contact-eyebrow{font-size:11px;letter-spacing:3px;margin-bottom:18px;color:#69734a}
+#contact .contact-copy h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,5vw,72px);font-weight:400;line-height:1;margin-bottom:24px;color:#34382b}
+#contact .contact-copy>p:last-child{font-size:13px;line-height:1.9;color:#667052}
+#contact .guestbook-form{display:flex;flex-direction:column;gap:18px}
+#contact .guestbook-form label{font-size:10px;letter-spacing:2px;color:#56603e}
+#contact .guestbook-form input,#contact .guestbook-form textarea{display:block;width:100%;box-sizing:border-box;border:0;border-bottom:1px solid rgba(52,56,43,.35);background:transparent;padding:10px 2px;font:inherit;color:#34382b;outline:none;resize:none}
+#contact .guestbook-form input:focus,#contact .guestbook-form textarea:focus{border-color:#34382b}
+#contact .guestbook-form button{align-self:flex-start;border:1px solid #59633f;border-radius:30px;background:transparent;padding:11px 18px;letter-spacing:1.5px;font-size:10px;cursor:pointer;color:#34382b}
+#contact .guestbook-form button span{margin-left:22px}
+#contact .guestbook-form button:disabled{opacity:.5;cursor:wait}
+#contact #guestbook-status{min-height:22px;font-size:11px;color:#59633f}
+#contact .guestbook-hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
+@media(max-width:700px){#contact{padding:80px 25px 40px;overflow-y:auto!important;align-items:flex-start!important}#contact .contact-inner{grid-template-columns:1fr;gap:42px}.contact-copy h2{font-size:48px!important}}
