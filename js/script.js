@@ -25,11 +25,7 @@ function initWorksSwiper() {
   if (works_swiper) works_swiper.destroy(true, true);
   const works = document.getElementById('works');
   if (!works.querySelector('.portfolio-bottom-deco')) works.insertAdjacentHTML('beforeend', `
-    <div class="portfolio-bottom-deco" aria-hidden="true">
-      <img class="d1" src="./images/나뭇가지와 나뭇잎1.png" alt=""><img class="d2" src="./images/간단나무1.png" alt="">
-      <img class="d3" src="./images/나뭇가지와 나뭇잎3.png" alt=""><img class="d4" src="./images/간단나무2.png" alt="">
-      <img class="d5" src="./images/간단나무5.png" alt=""><img class="d6" src="./images/나뭇가지와 나뭇잎4.png" alt="">
-    </div><div class="portfolio-controls"><button class="portfolio-prev" type="button" aria-label="이전 작품">◀</button><button class="portfolio-next" type="button" aria-label="다음 작품">▶</button></div>`);
+    <div class="portfolio-bottom-deco" aria-hidden="true"><img class="portfolio-footer-art" src="./images/사이트 페이지.png" alt=""></div><div class="portfolio-controls"><button class="portfolio-prev" type="button" aria-label="이전 작품">◀</button><button class="portfolio-next" type="button" aria-label="다음 작품">▶</button></div>`);
   works_swiper = new Swiper('#works_inner', {
     wrapperClass:"list", slideClass:"item", slidesPerView:3, slidesPerGroup:1, spaceBetween:26, centeredSlides:false, loop:true, speed:700, nested:true, watchSlidesProgress:true,
     navigation:{nextEl:".portfolio-next",prevEl:".portfolio-prev"},
