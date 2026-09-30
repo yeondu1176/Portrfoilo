@@ -1320,3 +1320,40 @@ header.site-header #gnb .btn.active::before{
   #works .search-deco-tree{width:82px!important;right:-38px!important;top:-34px!important}
   #works .search-deco-leaf{width:38px!important;top:-31px!important}
 }
+
+
+/* Search botanical layer fix — decoration visible without moving layout */
+#works .portfolio-search{
+  top:82px!important;
+  overflow:visible!important;
+  isolation:visible!important;
+}
+#works .portfolio-search input{
+  position:relative!important;
+  z-index:31!important;
+}
+#works .portfolio-search-button{
+  z-index:33!important;
+}
+#works .search-deco{
+  visibility:visible!important;
+  opacity:1!important;
+  overflow:visible!important;
+  z-index:32!important;
+}
+#works .search-deco-branch{
+  width:118px!important;
+  left:-48px!important;
+  top:-36px!important;
+}
+#works .search-deco-tree{
+  width:92px!important;
+  right:-42px!important;
+  top:-34px!important;
+}
+#works .search-deco-leaf{
+  width:42px!important;
+  left:48%!important;
+  top:-30px!important;
+  opacity:.95!important;
+}
