@@ -1438,3 +1438,7 @@ header.site-header #gnb .btn.active::before{
   z-index:19!important;
   pointer-events:none!important;
 }
+
+
+/* Remove all portfolio search decorations */
+#works .search-deco{display:none!important}
