@@ -975,7 +975,7 @@ header.site-header #gnb .btn.active::before{
 #works .portfolio-controls{position:absolute;left:50%!important;bottom:22px!important;transform:translateX(-50%)!important;z-index:5;display:flex!important;gap:34px!important}
 #works .portfolio-controls button{width:58px!important;height:58px!important;border:0!important;border-radius:50%!important;background:#69704a!important;color:#f6f6ee!important;font-size:24px!important;display:grid!important;place-items:center!important;cursor:pointer}
 @media(min-width:1100px){
-  #works #works_inner .item{width:calc((100% - 52px)/3)!important}
+  #works #works_inner .item{width:280px!important;min-width:280px!important;max-width:280px!important}
 }
 @media(max-width:1099px) and (min-width:701px){
   #works #works_inner{width:88vw!important;max-width:88vw!important}
@@ -1139,4 +1139,19 @@ header.site-header #gnb .btn.active::before{
   width:38px!important;
   height:43px!important;
   border-radius:8px!important;
+}
+
+
+/* Portfolio card width — final fixed outer width */
+#works #works_inner .item{
+  width:280px!important;
+  min-width:280px!important;
+  max-width:280px!important;
+  flex:0 0 280px!important;
+}
+#works #works_inner .work-card{
+  width:280px!important;
+  min-width:280px!important;
+  max-width:280px!important;
+  box-sizing:border-box!important;
 }
