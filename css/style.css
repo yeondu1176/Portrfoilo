@@ -1252,7 +1252,16 @@ header.site-header #gnb .btn.active::before{
 #works .portfolio-search-button:active{transform:translateY(-50%) scale(.96)!important}
 
 
-/* Keep portfolio cards at their pre-search vertical position */
+
+/* Search overlay: never changes portfolio card layout/position */
+#works .portfolio-search{
+  position:absolute!important;
+  top:18px!important;
+  left:50%!important;
+  transform:translateX(-50%)!important;
+  margin:0!important;
+  z-index:20!important;
+}
 #works #works_inner{
-  margin-top:-70px!important;
+  margin-top:0!important;
 }
