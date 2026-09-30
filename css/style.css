@@ -1114,16 +1114,16 @@ header.site-header #gnb .btn.active::before{
   clip-path:polygon(12% 5%,12% 95%,90% 50%)!important;
 }
 
-/* Portfolio footer placement — align arrows with the curled center leaves */
+/* Portfolio footer placement — visually nest controls into the curled leaves */
 #works .portfolio-bottom-deco{
-  left:50%!important;
+  left:calc(50% - 10px)!important;
   right:auto!important;
   width:92%!important;
   transform:translateX(-50%)!important;
 }
 #works .portfolio-controls{
-  left:50%!important;
-  bottom:68px!important;
+  left:48.8%!important;
+  bottom:64px!important;
   transform:translateX(-50%)!important;
   gap:14px!important;
 }
@@ -1132,7 +1132,7 @@ header.site-header #gnb .btn.active::before{
   height:78px!important;
 }
 #works .portfolio-controls button::before{
-  width:29px!important;
-  height:34px!important;
-  border-radius:7px!important;
+  width:38px!important;
+  height:43px!important;
+  border-radius:8px!important;
 }
