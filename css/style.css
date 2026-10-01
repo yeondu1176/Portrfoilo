@@ -1952,3 +1952,15 @@ header.site-header #gnb .btn.active::before{
 @media(max-width:760px){
   #contact .contact-title-wrap h2{font-size:clamp(57px,13vw,77px)!important}
 }
+
+
+/* Contact typography correction — only title stays +5px */
+#contact .guestbook-form label{
+  font-size:11px!important;
+}
+#contact .guestbook-form button{
+  font-size:11px!important;
+}
+#contact #guestbook-status{
+  font-size:11px!important;
+}
