@@ -1894,3 +1894,17 @@ header.site-header #gnb .btn.active::before{
     margin:-1px 0 0 -20px!important;
   }
 }
+
+
+/* Contact vine — enlarge by 300px only */
+#contact .contact-title-wrap .contact-title-art{
+  width:820px!important;
+  max-width:none!important;
+  margin-left:calc((470px - 820px) / 2)!important;
+}
+@media(max-width:1000px){
+  #contact .contact-title-wrap .contact-title-art{
+    width:765px!important;
+    margin-left:calc((420px - 765px) / 2)!important;
+  }
+}
