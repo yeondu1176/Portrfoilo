@@ -3219,3 +3219,50 @@ header.site-header #gnb .btn.active::before{
   #works #works_inner .project-title{font-size:24px!important}
   #works #works_inner .project-desc{font-size:12px!important;line-height:1.45!important}
 }
+
+
+/* Mobile Portfolio correction — hide actual controls and center compact card */
+@media(max-width:700px){
+  #works .portfolio-controls{
+    display:none!important;
+  }
+  #works{
+    padding-top:104px!important;
+  }
+  #works .portfolio-search{
+    margin:20px 20px 8px!important;
+  }
+  #works #works_inner{
+    width:100%!important;
+    max-width:100%!important;
+    padding:8px 0 86px!important;
+    box-sizing:border-box!important;
+  }
+  #works #works_inner .list{
+    width:100%!important;
+    padding:0 11vw!important;
+    gap:16px!important;
+    box-sizing:border-box!important;
+  }
+  #works #works_inner .item{
+    width:78vw!important;
+    min-width:78vw!important;
+    max-width:78vw!important;
+    flex:0 0 78vw!important;
+  }
+  #works #works_inner .work-card{
+    width:78vw!important;
+    height:410px!important;
+    min-height:410px!important;
+    max-height:410px!important;
+    margin:0!important;
+  }
+  #works #works_inner .thumb-box{
+    height:190px!important;
+    min-height:190px!important;
+    max-height:190px!important;
+  }
+  #works .portfolio-bottom-deco{
+    width:78vw!important;
+  }
+}
