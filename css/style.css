@@ -2000,3 +2000,9 @@ header.site-header #gnb .btn.active::before{
 #contact .contact-title-wrap .contact-title-art{
   transform:translateY(-280px)!important;
 }
+
+
+/* Contact vine — lower another 10px */
+#contact .contact-title-wrap .contact-title-art{
+  transform:translateY(-270px)!important;
+}
