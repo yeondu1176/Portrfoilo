@@ -2169,3 +2169,16 @@ header.site-header #gnb .btn.active::before{
 @media(max-width:760px){
   #contact .contact-email-art{width:185px!important}
 }
+
+
+/* Contact email typography — enlarge by 30px */
+#contact .contact-email-label{
+  font-size:43px!important;
+}
+#contact .contact-email a{
+  font-size:46px!important;
+}
+@media(max-width:760px){
+  #contact .contact-email-label{font-size:43px!important}
+  #contact .contact-email a{font-size:44px!important}
+}
