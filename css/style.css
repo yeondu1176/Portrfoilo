@@ -2923,3 +2923,33 @@ header.site-header #gnb .btn.active::before{
     scroll-snap-align:start!important;
   }
 }
+
+
+/* Mobile About tools — compact single row */
+@media(max-width:700px){
+  #about .about-tools{
+    display:flex!important;
+    flex-wrap:nowrap!important;
+    align-items:flex-start!important;
+    justify-content:space-between!important;
+    gap:4px!important;
+    width:100%!important;
+    margin:0 0 24px!important;
+  }
+  #about .about-tool{
+    flex:0 1 20%!important;
+    min-width:0!important;
+    font-size:10px!important;
+    white-space:nowrap!important;
+  }
+  #about .about-tool img,
+  #about .premiere-fallback{
+    width:32px!important;
+    height:32px!important;
+    margin-bottom:6px!important;
+  }
+  #about .premiere-fallback{
+    font-size:17px!important;
+    line-height:32px!important;
+  }
+}
