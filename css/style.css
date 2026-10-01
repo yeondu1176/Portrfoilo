@@ -1544,3 +1544,12 @@ header.site-header #gnb .btn.active::before{
 @media(max-width:700px){
   #works .portfolio-search-vine{top:-10px!important}
 }
+
+
+/* Portfolio vine — raise an additional 45px */
+#works .portfolio-search-vine{
+  top:-55px!important;
+}
+@media(max-width:700px){
+  #works .portfolio-search-vine{top:-55px!important}
+}
