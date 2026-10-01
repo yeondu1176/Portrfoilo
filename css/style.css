@@ -1908,3 +1908,17 @@ header.site-header #gnb .btn.active::before{
     margin-left:calc((420px - 765px) / 2)!important;
   }
 }
+
+
+/* Contact vine — enlarge by another 500px only */
+#contact .contact-title-wrap .contact-title-art{
+  width:1320px!important;
+  max-width:none!important;
+  margin-left:calc((470px - 1320px) / 2)!important;
+}
+@media(max-width:1000px){
+  #contact .contact-title-wrap .contact-title-art{
+    width:1265px!important;
+    margin-left:calc((420px - 1265px) / 2)!important;
+  }
+}
