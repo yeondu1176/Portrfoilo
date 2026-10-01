@@ -2865,3 +2865,61 @@ header.site-header #gnb .btn.active::before{
     font-size:13px!important;
   }
 }
+
+
+/* Mobile About — stack profile descriptions and swipe Skills horizontally */
+@media(max-width:700px){
+  #about .about-profile-list{
+    display:block!important;
+    margin-bottom:26px!important;
+  }
+  #about .about-profile-list dt{
+    display:block!important;
+    margin:0 0 5px!important;
+  }
+  #about .about-profile-list dd{
+    display:block!important;
+    margin:0 0 18px!important;
+    padding:0!important;
+    line-height:1.5!important;
+  }
+
+  #about .about-skills-block{
+    width:100%!important;
+    overflow:visible!important;
+  }
+  #about .about-skills-block .about-heading-row{
+    margin-bottom:18px!important;
+  }
+  #about .about-skills-block{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    column-gap:0!important;
+  }
+  #about .about-skills-block .about-heading-row{
+    flex:0 0 100%!important;
+    width:100%!important;
+  }
+  #about .about-skill-group{
+    flex:0 0 82%!important;
+    box-sizing:border-box!important;
+    margin:0 14px 12px 0!important;
+    padding:14px 16px!important;
+    border:1px solid rgba(111,121,85,.28)!important;
+    border-radius:16px!important;
+    background:rgba(246,246,238,.38)!important;
+  }
+  #about .about-skills-block{
+    overflow-x:auto!important;
+    overflow-y:visible!important;
+    scroll-snap-type:x mandatory!important;
+    -webkit-overflow-scrolling:touch!important;
+    scrollbar-width:none!important;
+  }
+  #about .about-skills-block::-webkit-scrollbar{
+    display:none!important;
+  }
+  #about .about-skill-group{
+    scroll-snap-align:start!important;
+  }
+}
