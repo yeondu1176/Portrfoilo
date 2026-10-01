@@ -2182,3 +2182,76 @@ header.site-header #gnb .btn.active::before{
   #contact .contact-email-label{font-size:43px!important}
   #contact .contact-email a{font-size:44px!important}
 }
+
+
+/* Contact airy details — removable decorative layer */
+#contact .contact-email-sprig{
+  position:relative;
+  width:180px;
+  height:28px;
+  margin:12px auto 0;
+}
+#contact .contact-email-sprig::before{
+  content:"";
+  position:absolute;
+  left:12px;
+  right:12px;
+  top:13px;
+  height:1px;
+  background:#9ca77b;
+  transform:rotate(-1deg);
+  opacity:.72;
+}
+#contact .contact-email-sprig i{
+  position:absolute;
+  width:14px;
+  height:7px;
+  border-radius:100% 0 100% 0;
+  background:#9ca77b;
+  opacity:.72;
+  transform:rotate(-28deg);
+}
+#contact .contact-email-sprig i:nth-child(1){left:35px;top:7px;transform:rotate(25deg)}
+#contact .contact-email-sprig i:nth-child(2){left:60px;top:14px;transform:rotate(-30deg)}
+#contact .contact-email-sprig i:nth-child(3){left:84px;top:6px;transform:rotate(30deg)}
+#contact .contact-email-sprig i:nth-child(4){left:110px;top:14px;transform:rotate(-28deg)}
+#contact .contact-email-sprig i:nth-child(5){left:134px;top:7px;transform:rotate(25deg)}
+
+#contact .contact-air-details{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  overflow:hidden;
+}
+#contact .air-leaf{
+  position:absolute;
+  display:block;
+  width:20px;
+  height:10px;
+  border-radius:100% 0 100% 0;
+  border:1px solid rgba(137,151,94,.62);
+  background:rgba(188,202,135,.22);
+}
+#contact .leaf-one{left:37%;top:49%;transform:rotate(28deg)}
+#contact .leaf-two{left:41%;top:56%;width:15px;height:8px;transform:rotate(-22deg)}
+#contact .leaf-three{left:58%;top:60%;width:17px;height:9px;transform:rotate(42deg)}
+#contact .leaf-four{left:62%;top:53%;width:13px;height:7px;transform:rotate(-38deg)}
+#contact .air-spark{
+  position:absolute;
+  color:rgba(183,170,78,.62);
+  font-family:Georgia,serif;
+  line-height:1;
+}
+#contact .spark-one{left:43%;top:48%;font-size:16px}
+#contact .spark-two{left:59%;top:51%;font-size:14px}
+#contact .spark-three{left:55%;top:63%;font-size:22px;color:rgba(150,163,102,.52)}
+
+@media(max-width:760px){
+  #contact .contact-email-sprig{width:140px}
+  #contact .contact-air-details{opacity:.75}
+  #contact .leaf-one{left:25%;top:48%}
+  #contact .leaf-two{left:30%;top:56%}
+  #contact .leaf-three{left:70%;top:58%}
+  #contact .leaf-four{left:74%;top:51%}
+}
