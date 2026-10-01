@@ -3170,3 +3170,14 @@ header.site-header #gnb .btn.active::before{
   #about .about-skills-block .about-skill-group h4{margin:0 0 5px!important}
   #about .about-skills-block .about-skill-group p{margin:0!important}
 }
+
+
+/* Mobile Skills card — add breathing room between groups */
+@media(max-width:700px){
+  #about .about-skills-block .about-skill-group{
+    margin-bottom:24px!important;
+  }
+  #about .about-skills-block .about-skill-group:last-child{
+    margin-bottom:0!important;
+  }
+}
