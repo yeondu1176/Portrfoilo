@@ -34,7 +34,7 @@ function initWorksSwiper() {
     slidesPerGroup:1,
     spaceBetween:isMobileWorks ? 0 : 15,
     centeredSlides:isMobileWorks,
-    loop:!isMobileWorks,
+    loop:true,
     speed:700,
     nested:true,
     watchSlidesProgress:true,
