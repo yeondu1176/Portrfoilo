@@ -2309,3 +2309,271 @@ header.site-header #gnb .btn.active::before{
 #contact .contact-email a{
   transform:translateX(15px)!important;
 }
+
+
+/* =========================================================
+   Mobile layout pass — phone only (desktop remains unchanged)
+   ========================================================= */
+@media(max-width:700px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden!important}
+  #wrap{width:100%;height:100dvh;overflow:hidden}
+  #wrap .section{width:100%;height:100dvh;min-height:100dvh;overflow:hidden}
+
+  /* Header: brand on first row, navigation on second row */
+  header.site-header{
+    height:108px!important;
+    padding:7px 14px 6px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:flex-start!important;
+    align-items:center!important;
+    gap:3px!important;
+    background:rgba(246,246,238,.94)!important;
+  }
+  header.site-header .header-brand{
+    width:100%!important;
+    height:51px!important;
+    justify-content:center!important;
+    gap:7px!important;
+  }
+  header.site-header .header-brand-leaf{
+    position:absolute!important;
+    left:12px!important;
+    top:8px!important;
+    width:48px!important;
+    height:48px!important;
+  }
+  header.site-header #title{
+    margin:0!important;
+    font-size:23px!important;
+    line-height:1!important;
+  }
+  header.site-header .header-center-deco{display:none!important}
+  header.site-header #gnb{width:100%!important}
+  header.site-header #gnb ul{
+    width:100%!important;
+    display:grid!important;
+    grid-template-columns:repeat(4,1fr)!important;
+    gap:0!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  header.site-header #gnb .btn{
+    padding:13px 0 12px!important;
+    text-align:center!important;
+    font-size:11px!important;
+    white-space:nowrap!important;
+  }
+  header.site-header #gnb .btn.active::before{
+    top:-6px!important;
+    width:24px!important;
+    height:16px!important;
+  }
+  header.site-header #gnb .btn.active::after{
+    bottom:5px!important;
+    width:60%!important;
+  }
+
+  /* Main */
+  #main #main_bg{top:0!important;height:100%!important}
+  #main #back{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+  }
+  #main #main_inner{
+    width:86%!important;
+    height:auto!important;
+    margin-top:80px!important;
+  }
+  #main #main_inner .title{
+    font-size:clamp(28px,8vw,42px)!important;
+  }
+  #main #main_inner .sub_line{
+    position:relative!important;
+    top:auto!important;
+    left:auto!important;
+    margin-top:42px!important;
+    font-size:11px!important;
+  }
+
+  /* About: compact single-column phone composition */
+  #about{overflow:hidden!important}
+  #about .about-page{
+    width:100%!important;
+    height:100dvh!important;
+    min-height:0!important;
+    padding:128px 7% 28px!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+  }
+  #about .about-bg-tree{
+    width:125%!important;
+    right:-38%!important;
+    opacity:.14!important;
+  }
+  #about .about-bg-corner{width:55%!important;opacity:.15!important}
+  #about .about-title-area{
+    position:relative!important;
+    left:auto!important;
+    top:auto!important;
+    width:100%!important;
+    min-width:0!important;
+    margin:0 0 24px!important;
+  }
+  #about .about-title-area h2{
+    display:flex!important;
+    gap:10px!important;
+    font-size:48px!important;
+    line-height:1!important;
+  }
+  #about .about-title-area h2 span:last-child{margin-top:0!important}
+  #about .about-vine-image{width:180px!important;max-height:70px!important}
+  #about .about-content{
+    width:100%!important;
+    transform:none!important;
+  }
+  #about .about-heading-row{
+    gap:14px!important;
+    margin-bottom:20px!important;
+  }
+  #about .about-heading-row h3{font-size:26px!important}
+  #about .about-profile-list{
+    grid-template-columns:105px minmax(0,1fr)!important;
+    row-gap:14px!important;
+  }
+  #about .about-profile-list dt{font-size:16px!important}
+  #about .about-profile-list dd{
+    min-width:0!important;
+    font-size:15px!important;
+    line-height:1.45!important;
+    overflow-wrap:anywhere!important;
+  }
+  #about .about-profile-block>h4{font-size:17px!important}
+  #about .about-tools{
+    gap:12px!important;
+    margin-left:0!important;
+    flex-wrap:wrap!important;
+  }
+  #about .about-tool{min-width:52px!important;font-size:12px!important}
+  #about .about-tool img,
+  #about .premiere-fallback{width:34px!important;height:34px!important}
+  #about .premiere-fallback{font-size:18px!important;line-height:34px!important}
+  #about .about-skills-block .about-heading-row{margin-bottom:24px!important}
+  #about .about-skill-group{margin-bottom:18px!important}
+  #about .about-skill-group h4{font-size:17px!important}
+  #about .about-skill-group p{font-size:14px!important}
+
+  /* Portfolio: one complete card at a time */
+  #works{
+    justify-content:flex-start!important;
+    align-items:stretch!important;
+    padding-top:118px!important;
+    box-sizing:border-box!important;
+  }
+  #works .work-header{display:none!important}
+  #works .portfolio-search{
+    width:calc(100% - 40px)!important;
+    max-width:none!important;
+    margin:25px 20px 16px!important;
+    box-sizing:border-box!important;
+  }
+  #works .portfolio-search-vine{
+    width:100%!important;
+    max-width:100%!important;
+    left:0!important;
+    transform:none!important;
+  }
+  #works #works_inner{
+    width:100%!important;
+    padding:22px 0 24px!important;
+    overflow:hidden!important;
+  }
+  #works #works_inner .list{
+    width:100%!important;
+    display:flex!important;
+    gap:16px!important;
+    padding:0 24px!important;
+    box-sizing:border-box!important;
+  }
+  #works #works_inner .item{
+    width:calc(100vw - 48px)!important;
+    flex:0 0 calc(100vw - 48px)!important;
+  }
+  #works #works_inner .work-card{
+    width:100%!important;
+    box-sizing:border-box!important;
+    padding:14px 14px 20px!important;
+    border-radius:26px!important;
+  }
+  #works #works_inner .work-card .thumb-box{
+    aspect-ratio:4/3!important;
+    border-radius:20px!important;
+  }
+  #works #works_inner .work-card .meta-info{margin-top:14px!important}
+  #works #works_inner .project-title{font-size:28px!important}
+  #works #works_inner .project-desc{font-size:13px!important;line-height:1.55!important}
+
+  /* Contact: vertical phone composition */
+  #contact .contact-page{
+    width:100%!important;
+    height:100dvh!important;
+    min-height:0!important;
+    padding-top:108px!important;
+    box-sizing:border-box!important;
+    overflow:hidden!important;
+  }
+  #contact .contact-title-wrap{
+    top:15%!important;
+    left:50%!important;
+    width:82vw!important;
+    max-width:none!important;
+  }
+  #contact .contact-title-wrap h2{
+    font-size:58px!important;
+    transform:translateY(0)!important;
+  }
+  #contact .contact-title-wrap .contact-title-art{
+    width:170vw!important;
+    margin-left:calc((82vw - 170vw)/2)!important;
+    transform:translateY(-125px)!important;
+  }
+  #contact .contact-email{
+    left:50%!important;
+    top:44%!important;
+    transform:translate(-50%,-50%)!important;
+  }
+  #contact .contact-email-art{width:145px!important;margin-bottom:5px!important}
+  #contact .contact-email-label{
+    font-size:25px!important;
+    transform:translateX(8px)!important;
+  }
+  #contact .contact-email a{
+    font-size:25px!important;
+    transform:translateX(8px)!important;
+  }
+  #contact .guestbook-form{
+    left:7%!important;
+    bottom:8%!important;
+    width:62%!important;
+    gap:38px!important;
+  }
+  #contact .guestbook-form label:first-child{width:58%!important}
+  #contact .guestbook-form button{
+    left:calc(58% + 18px)!important;
+    right:auto!important;
+    top:14px!important;
+    min-width:56px!important;
+    height:34px!important;
+  }
+  #contact .contact-forest-art{
+    right:-17%!important;
+    bottom:2%!important;
+    width:64vw!important;
+    max-height:245px!important;
+    opacity:.82!important;
+  }
+  #contact .spark-one{left:35%!important;top:42%!important}
+  #contact .spark-two{left:67%!important;top:45%!important}
+  #contact .spark-three{left:60%!important;top:53%!important}
+}
