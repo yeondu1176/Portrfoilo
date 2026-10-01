@@ -1982,3 +1982,9 @@ header.site-header #gnb .btn.active::before{
 #contact .contact-title-wrap h2{
   transform:translateY(10px)!important;
 }
+
+
+/* Contact vine — move upward 500px only */
+#contact .contact-title-wrap .contact-title-art{
+  transform:translateY(-500px)!important;
+}
