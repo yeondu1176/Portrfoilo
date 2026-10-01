@@ -1553,3 +1553,127 @@ header.site-header #gnb .btn.active::before{
 @media(max-width:700px){
   #works .portfolio-search-vine{top:-55px!important}
 }
+
+
+/* Contact — reference layout */
+#contact{
+  position:relative!important;
+  display:block!important;
+  overflow:hidden!important;
+  padding:0!important;
+  box-sizing:border-box!important;
+  background:#f6f6ee!important;
+}
+#contact .contact-page{
+  position:relative;
+  width:100%;
+  height:100vh;
+  min-height:650px;
+  overflow:hidden;
+}
+#contact .contact-title-art{
+  position:absolute;
+  top:16%;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(600px,42vw);
+  height:auto;
+  object-fit:contain;
+  z-index:2;
+}
+#contact .contact-forest-art{
+  position:absolute;
+  right:-1%;
+  bottom:-1%;
+  width:min(610px,43vw);
+  height:auto;
+  object-fit:contain;
+  object-position:right bottom;
+  pointer-events:none;
+  user-select:none;
+}
+#contact .guestbook-form{
+  position:absolute;
+  left:9.5%;
+  bottom:9%;
+  width:min(520px,42vw);
+  display:flex;
+  flex-direction:column;
+  gap:62px;
+  z-index:3;
+}
+#contact .guestbook-form label{
+  display:block;
+  margin:0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:11px;
+  letter-spacing:0;
+  color:#25291d;
+}
+#contact .guestbook-form label span{
+  display:block;
+  margin-bottom:9px;
+}
+#contact .guestbook-form input:not(.guestbook-hp),
+#contact .guestbook-form textarea{
+  display:block;
+  width:100%;
+  height:20px;
+  min-height:20px;
+  margin:0;
+  padding:0 2px 5px;
+  box-sizing:border-box;
+  border:0!important;
+  border-bottom:1px solid #8d9572!important;
+  border-radius:0!important;
+  outline:none!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  resize:none;
+  overflow:hidden;
+  color:#34382b;
+  font:14px "Pretendard Variable",Pretendard,sans-serif;
+}
+#contact .guestbook-form input:focus,
+#contact .guestbook-form textarea:focus{
+  border-bottom-color:#56603e!important;
+  box-shadow:none!important;
+}
+#contact .guestbook-form label:first-child{width:46%}
+#contact .guestbook-form label:nth-child(2){width:100%}
+#contact .guestbook-form button{
+  position:absolute;
+  right:0;
+  bottom:-42px;
+  padding:0;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:#69734b;
+  font:11px Georgia,"Times New Roman",serif;
+  letter-spacing:1.5px;
+  cursor:pointer;
+}
+#contact #guestbook-status{
+  position:absolute;
+  left:0;
+  bottom:-45px;
+  min-height:18px;
+  margin:0;
+  font-size:11px;
+  color:#59633f;
+}
+#contact #turnstile-box{position:absolute;left:0;bottom:-95px}
+#contact .guestbook-hp{
+  position:absolute!important;
+  left:-9999px!important;
+  width:1px!important;
+  height:1px!important;
+  opacity:0!important;
+}
+@media(max-width:760px){
+  #contact .contact-title-art{top:15%;width:min(520px,78vw)}
+  #contact .contact-forest-art{right:-14%;width:72vw;opacity:.72}
+  #contact .guestbook-form{left:8%;bottom:15%;width:60vw;gap:45px}
+  #contact .guestbook-form label:first-child{width:65%}
+}
