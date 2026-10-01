@@ -1988,3 +1988,9 @@ header.site-header #gnb .btn.active::before{
 #contact .contact-title-wrap .contact-title-art{
   transform:translateY(-500px)!important;
 }
+
+
+/* Contact vine — lower 200px from previous position */
+#contact .contact-title-wrap .contact-title-art{
+  transform:translateY(-300px)!important;
+}
