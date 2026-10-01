@@ -282,7 +282,23 @@
             <span class="air-spark spark-two">✧</span>
             <span class="air-spark spark-three">·</span>
           </div>
-          </div>
+
+          <form id="guestbook-form" class="guestbook-form">
+            <label>
+              <span>NICKNAME</span>
+              <input type="text" name="name" maxlength="40" required autocomplete="name" aria-label="닉네임">
+            </label>
+            <label>
+              <span>MESSAGE</span>
+              <textarea name="message" maxlength="500" required rows="2" aria-label="메시지"></textarea>
+            </label>
+            <input class="guestbook-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div id="turnstile-box"></div>
+            <button type="submit" aria-label="방명록 보내기">SEND</button>
+            <p id="guestbook-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
   </main>
 
   <!--외부스크립트-->
