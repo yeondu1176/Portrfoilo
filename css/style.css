@@ -3320,3 +3320,26 @@ header.site-header #gnb .btn.active::before{
     width:280px!important;
   }
 }
+
+
+/* Mobile Portfolio — let Swiper handle horizontal movement */
+@media(max-width:700px){
+  #works #works_inner{
+    overflow:hidden!important;
+    touch-action:pan-y!important;
+  }
+  #works #works_inner .list{
+    overflow:visible!important;
+    scroll-snap-type:none!important;
+    scroll-behavior:auto!important;
+    touch-action:pan-y!important;
+  }
+  #works #works_inner .item{
+    width:100%!important;
+    min-width:100%!important;
+    max-width:100%!important;
+    flex:0 0 100%!important;
+    scroll-snap-align:none!important;
+    scroll-snap-stop:normal!important;
+  }
+}
