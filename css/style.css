@@ -2813,3 +2813,29 @@ header.site-header #gnb .btn.active::before{
     display:none!important;
   }
 }
+
+
+/* Mobile About title sparkles — half size and naturally grouped around title */
+@media(max-width:700px){
+  #about .about-title-area .about-spark{
+    font-size:11px!important;
+    line-height:1!important;
+    z-index:2!important;
+  }
+  #about .about-title-area .about-spark-1{
+    left:-2px!important;
+    top:-4px!important;
+  }
+  #about .about-title-area .about-spark-2{
+    left:228px!important;
+    top:39px!important;
+  }
+  #about .about-title-area .about-spark-3{
+    left:174px!important;
+    top:-7px!important;
+  }
+  #about .about-title-area .about-spark-4{
+    left:286px!important;
+    top:11px!important;
+  }
+}
