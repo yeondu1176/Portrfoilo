@@ -3404,3 +3404,14 @@ header.site-header #gnb .btn.active::before{
     transform:translateX(-50%)!important;
   }
 }
+
+
+/* Mobile Portfolio — additional 10px lower card + 3px larger vine */
+@media(max-width:700px){
+  #works #works_inner .work-card{
+    transform:translateY(20px)!important;
+  }
+  #works .portfolio-bottom-deco{
+    width:284px!important;
+  }
+}
