@@ -3532,3 +3532,11 @@ header.site-header #gnb .btn.active::before{
     bottom:0!important;
   }
 }
+
+
+/* Mobile Contact — move forest artwork 30px upward */
+@media(max-width:700px){
+  #contact .contact-forest-art{
+    bottom:calc(2% + 30px)!important;
+  }
+}
