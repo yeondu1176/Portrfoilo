@@ -3437,3 +3437,27 @@ header.site-header #gnb .btn.active::before{
     right:auto!important;
   }
 }
+
+
+/* Mobile Portfolio — center the whole search composition */
+@media(max-width:700px){
+  #works .portfolio-search{
+    position:absolute!important;
+    top:104px!important;
+    left:50%!important;
+    right:auto!important;
+    width:320px!important;
+    max-width:calc(100vw - 40px)!important;
+    margin:0!important;
+    transform:translateX(-50%)!important;
+  }
+  #works .portfolio-search-vine{
+    left:50%!important;
+    width:320px!important;
+    max-width:none!important;
+    transform:translateX(-50%)!important;
+  }
+  #works .portfolio-search-button{
+    right:10px!important;
+  }
+}
