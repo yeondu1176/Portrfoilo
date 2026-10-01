@@ -2805,3 +2805,11 @@ header.site-header #gnb .btn.active::before{
     background:rgba(246,246,238,.48)!important;
   }
 }
+
+
+/* Mobile About title — remove overlapping vine artwork */
+@media(max-width:700px){
+  #about .about-title-area .about-vine-image{
+    display:none!important;
+  }
+}
