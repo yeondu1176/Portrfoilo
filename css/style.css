@@ -3426,3 +3426,14 @@ header.site-header #gnb .btn.active::before{
     width:289px!important;
   }
 }
+
+
+/* Mobile Portfolio — center search */
+@media(max-width:700px){
+  #works .portfolio-search{
+    width:calc(100% - 40px)!important;
+    margin:20px auto 8px!important;
+    left:auto!important;
+    right:auto!important;
+  }
+}
