@@ -2160,3 +2160,12 @@ header.site-header #gnb .btn.active::before{
   #contact .contact-email-art{width:135px}
   #contact .contact-email a{font-size:14px}
 }
+
+
+/* Contact email artwork — enlarge by 50px */
+#contact .contact-email-art{
+  width:220px!important;
+}
+@media(max-width:760px){
+  #contact .contact-email-art{width:185px!important}
+}
