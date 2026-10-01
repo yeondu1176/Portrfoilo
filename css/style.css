@@ -1535,3 +1535,12 @@ header.site-header #gnb .btn.active::before{
     width:320px!important;
   }
 }
+
+
+/* Portfolio vine — raise 30px */
+#works .portfolio-search-vine{
+  top:-10px!important;
+}
+@media(max-width:700px){
+  #works .portfolio-search-vine{top:-10px!important}
+}
