@@ -26,10 +26,23 @@ function initWorksSwiper() {
   const works = document.getElementById('works');
   if (!works.querySelector('.portfolio-bottom-deco')) works.insertAdjacentHTML('beforeend', `
     <div class="portfolio-bottom-deco" aria-hidden="true"><img class="portfolio-footer-art" src="./images/사이트 페이지.png" alt=""></div><div class="portfolio-controls"><button class="portfolio-prev" type="button" aria-label="이전 작품">◀</button><button class="portfolio-next" type="button" aria-label="다음 작품">▶</button></div>`);
+  const isMobileWorks = window.matchMedia('(max-width: 700px)').matches;
   works_swiper = new Swiper('#works_inner', {
-    wrapperClass:"list", slideClass:"item", slidesPerView:"auto", slidesPerGroup:1, spaceBetween:15, centeredSlides:false, loop:true, speed:700, nested:true, watchSlidesProgress:true,
-    navigation:{nextEl:".portfolio-next",prevEl:".portfolio-prev"},
-    breakpoints:{0:{slidesPerView:"auto",spaceBetween:14},700:{slidesPerView:"auto",spaceBetween:20},1100:{slidesPerView:"auto",spaceBetween:15}}
+    wrapperClass:"list",
+    slideClass:"item",
+    slidesPerView:isMobileWorks ? 1 : "auto",
+    slidesPerGroup:1,
+    spaceBetween:isMobileWorks ? 0 : 15,
+    centeredSlides:isMobileWorks,
+    loop:!isMobileWorks,
+    speed:700,
+    nested:true,
+    watchSlidesProgress:true,
+    navigation:isMobileWorks ? undefined : {nextEl:".portfolio-next",prevEl:".portfolio-prev"},
+    breakpoints:isMobileWorks ? undefined : {
+      700:{slidesPerView:"auto",spaceBetween:20},
+      1100:{slidesPerView:"auto",spaceBetween:15}
+    }
   });
 }
 
