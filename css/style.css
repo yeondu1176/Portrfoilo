@@ -3461,3 +3461,14 @@ header.site-header #gnb .btn.active::before{
     right:10px!important;
   }
 }
+
+
+/* Mobile Portfolio — raise search function only, keep vine fixed */
+@media(max-width:700px){
+  #works .portfolio-search input{
+    transform:translateY(-5px)!important;
+  }
+  #works .portfolio-search-button{
+    top:calc(50% - 5px)!important;
+  }
+}
