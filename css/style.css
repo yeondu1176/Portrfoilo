@@ -3181,3 +3181,14 @@ header.site-header #gnb .btn.active::before{
     margin-bottom:0!important;
   }
 }
+
+
+/* Mobile Skills card — wider spacing between groups */
+@media(max-width:700px){
+  #about .about-skills-block .about-skill-group{
+    margin-bottom:34px!important;
+  }
+  #about .about-skills-block .about-skill-group:last-child{
+    margin-bottom:0!important;
+  }
+}
