@@ -2302,3 +2302,10 @@ header.site-header #gnb .btn.active::before{
 #contact .contact-email a{
   transform:translateX(5px)!important;
 }
+
+
+/* Contact email text — move another 10px right (15px total) */
+#contact .contact-email-label,
+#contact .contact-email a{
+  transform:translateX(15px)!important;
+}
