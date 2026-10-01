@@ -2777,3 +2777,23 @@ header.site-header #gnb .btn.active::before{
     -webkit-backdrop-filter:blur(3px)!important;
   }
 }
+
+
+/* Mobile About background — World Tree only */
+@media(max-width:700px){
+  #about .about-bg-corner{
+    display:none!important;
+  }
+  #about .about-bg-tree{
+    display:block!important;
+    left:0!important;
+    right:auto!important;
+    top:0!important;
+    width:100%!important;
+    height:100%!important;
+    max-width:none!important;
+    opacity:.25!important;
+    object-fit:cover!important;
+    object-position:center center!important;
+  }
+}
