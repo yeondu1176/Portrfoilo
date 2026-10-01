@@ -3076,3 +3076,97 @@ header.site-header #gnb .btn.active::before{
     margin-bottom:18px!important;
   }
 }
+
+
+/* Mobile About — two cards only: Profile and Skills */
+@media(max-width:700px){
+  #about .about-content{
+    display:grid!important;
+    grid-template-columns:82vw 82vw!important;
+    gap:14px!important;
+    width:calc(100vw - 7%)!important;
+    margin-right:-7vw!important;
+    padding:0 7vw 12px 0!important;
+    box-sizing:border-box!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    scroll-snap-type:x mandatory!important;
+    -webkit-overflow-scrolling:touch!important;
+    scrollbar-width:none!important;
+  }
+  #about .about-content::-webkit-scrollbar{display:none!important}
+
+  #about .about-profile-block,
+  #about .about-skills-block{
+    display:block!important;
+    width:82vw!important;
+    min-width:82vw!important;
+    height:410px!important;
+    margin:0!important;
+    padding:20px 20px 18px!important;
+    box-sizing:border-box!important;
+    overflow:hidden!important;
+    border:1px solid rgba(105,115,75,.34)!important;
+    border-radius:22px!important;
+    background:rgba(246,246,238,.62)!important;
+    backdrop-filter:blur(2px)!important;
+    -webkit-backdrop-filter:blur(2px)!important;
+    scroll-snap-align:start!important;
+  }
+
+  #about .about-profile-block .about-heading-row,
+  #about .about-skills-block .about-heading-row{
+    display:grid!important;
+    width:100%!important;
+    position:static!important;
+    margin:0 0 18px!important;
+  }
+
+  /* Profile content returns to a simple list inside one card */
+  #about .about-profile-list{
+    display:block!important;
+    width:100%!important;
+    margin:0 0 16px!important;
+    padding:0!important;
+    overflow:visible!important;
+  }
+  #about .about-profile-list dt,
+  #about .about-profile-list dd{
+    display:block!important;
+    width:100%!important;
+    min-height:0!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+  }
+  #about .about-profile-list dt{margin-top:12px!important}
+  #about .about-profile-list dt:first-child{margin-top:0!important}
+  #about .about-profile-list dd{margin-top:4px!important;line-height:1.4!important}
+
+  #about .about-profile-block>h4{margin:14px 0 10px!important}
+  #about .about-tools{
+    display:flex!important;
+    width:100%!important;
+    flex-wrap:nowrap!important;
+    justify-content:space-between!important;
+    gap:3px!important;
+    margin:0!important;
+  }
+  #about .about-tool{flex:0 1 20%!important;min-width:0!important}
+
+  /* All Skills groups live together inside the second card */
+  #about .about-skills-block .about-skill-group{
+    display:block!important;
+    width:100%!important;
+    min-height:0!important;
+    margin:0 0 16px!important;
+    padding:0!important;
+    border:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+  }
+  #about .about-skills-block .about-skill-group h4{margin:0 0 5px!important}
+  #about .about-skills-block .about-skill-group p{margin:0!important}
+}
