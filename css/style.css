@@ -1677,3 +1677,27 @@ header.site-header #gnb .btn.active::before{
   #contact .guestbook-form{left:8%;bottom:15%;width:60vw;gap:45px}
   #contact .guestbook-form label:first-child{width:65%}
 }
+
+
+/* Contact artwork scale correction */
+#contact .contact-title-art{
+  top:17%!important;
+  width:min(480px,32vw)!important;
+  max-height:190px!important;
+}
+#contact .contact-forest-art{
+  right:1.5%!important;
+  bottom:0!important;
+  width:min(500px,34vw)!important;
+  max-height:390px!important;
+  object-fit:contain!important;
+  object-position:right bottom!important;
+}
+@media(max-width:1000px){
+  #contact .contact-title-art{width:min(430px,46vw)!important}
+  #contact .contact-forest-art{width:min(450px,43vw)!important}
+}
+@media(max-width:760px){
+  #contact .contact-title-art{width:62vw!important;max-height:150px!important}
+  #contact .contact-forest-art{right:-4%!important;width:52vw!important;max-height:300px!important}
+}
