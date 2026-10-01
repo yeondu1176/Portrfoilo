@@ -3496,3 +3496,11 @@ header.site-header #gnb .btn.active::before{
     padding-left:45px!important;
   }
 }
+
+
+/* Mobile Contact — lower title by 20px */
+@media(max-width:700px){
+  #contact .contact-title-wrap{
+    transform:translate(-50%,20px)!important;
+  }
+}
