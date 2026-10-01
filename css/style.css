@@ -3390,3 +3390,17 @@ header.site-header #gnb .btn.active::before{
     max-height:215px!important;
   }
 }
+
+
+/* Mobile Portfolio — final card/deco position tweak */
+@media(max-width:700px){
+  #works #works_inner .work-card{
+    transform:translateY(10px)!important;
+  }
+  #works .portfolio-bottom-deco{
+    left:50%!important;
+    right:auto!important;
+    width:281px!important;
+    transform:translateX(-50%)!important;
+  }
+}
