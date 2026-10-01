@@ -1976,3 +1976,9 @@ header.site-header #gnb .btn.active::before{
 @media(max-width:760px){
   #contact .contact-title-wrap h2{font-size:clamp(62px,13vw,82px)!important}
 }
+
+
+/* Contact title — move text down 10px only */
+#contact .contact-title-wrap h2{
+  transform:translateY(10px)!important;
+}
