@@ -2295,3 +2295,10 @@ header.site-header #gnb .btn.active::before{
   left:auto!important;
   transform:none!important;
 }
+
+
+/* Contact email text — move label and address 5px right */
+#contact .contact-email-label,
+#contact .contact-email a{
+  transform:translateX(5px)!important;
+}
