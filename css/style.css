@@ -2083,3 +2083,9 @@ header.site-header #gnb .btn.active::before{
 #contact .guestbook-form button{
   left:260px!important;
 }
+
+
+/* Guestbook SEND — move another 30px right */
+#contact .guestbook-form button{
+  left:290px!important;
+}
