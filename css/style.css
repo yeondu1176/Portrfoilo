@@ -2839,3 +2839,29 @@ header.site-header #gnb .btn.active::before{
     top:11px!important;
   }
 }
+
+
+/* Mobile About typography — lighter information hierarchy */
+@media(max-width:700px){
+  #about .about-heading-row h3{
+    font-size:24px!important;
+  }
+  #about .about-profile-list dt{
+    font-size:14px!important;
+  }
+  #about .about-profile-list dd{
+    font-size:13px!important;
+  }
+  #about .about-profile-block>h4{
+    font-size:15px!important;
+  }
+  #about .about-tool{
+    font-size:11px!important;
+  }
+  #about .about-skill-group h4{
+    font-size:15px!important;
+  }
+  #about .about-skill-group p{
+    font-size:13px!important;
+  }
+}
