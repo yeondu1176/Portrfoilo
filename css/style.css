@@ -2017,3 +2017,32 @@ header.site-header #gnb .btn.active::before{
     width:calc(42vw + 210px)!important;
   }
 }
+
+
+/* Guestbook SEND — match supplied reference */
+#contact .guestbook-form button{
+  position:absolute!important;
+  left:410px!important;
+  right:auto!important;
+  top:0!important;
+  bottom:auto!important;
+  min-width:62px!important;
+  height:40px!important;
+  padding:0 14px!important;
+  box-sizing:border-box!important;
+  border:1px solid #78805d!important;
+  border-radius:16px!important;
+  background:transparent!important;
+  color:#34382b!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  line-height:1!important;
+  letter-spacing:0!important;
+}
+@media(max-width:760px){
+  #contact .guestbook-form button{
+    left:auto!important;
+    right:0!important;
+  }
+}
