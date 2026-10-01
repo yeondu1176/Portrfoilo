@@ -1701,3 +1701,54 @@ header.site-header #gnb .btn.active::before{
   #contact .contact-title-art{width:62vw!important;max-height:150px!important}
   #contact .contact-forest-art{right:-4%!important;width:52vw!important;max-height:300px!important}
 }
+
+
+/* Contact title text + smaller corner artwork */
+#contact .contact-title-wrap{
+  position:absolute!important;
+  top:15%!important;
+  left:50%!important;
+  width:min(600px,42vw)!important;
+  transform:translateX(-50%)!important;
+  text-align:center!important;
+  z-index:3!important;
+}
+#contact .contact-title-wrap h2{
+  position:relative!important;
+  z-index:2!important;
+  margin:0!important;
+  color:#6d7650!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-size:clamp(68px,7.2vw,116px)!important;
+  font-weight:400!important;
+  line-height:.95!important;
+  letter-spacing:-3px!important;
+  text-transform:none!important;
+}
+#contact .contact-title-wrap .contact-title-art{
+  position:relative!important;
+  top:auto!important;
+  left:auto!important;
+  display:block!important;
+  width:100%!important;
+  max-height:110px!important;
+  margin:-10px auto 0!important;
+  transform:none!important;
+  object-fit:contain!important;
+}
+#contact .contact-forest-art{
+  right:2.5%!important;
+  bottom:1.5%!important;
+  width:min(390px,27vw)!important;
+  max-height:310px!important;
+}
+@media(max-width:1000px){
+  #contact .contact-title-wrap{width:min(520px,52vw)!important}
+  #contact .contact-forest-art{width:min(350px,34vw)!important}
+}
+@media(max-width:760px){
+  #contact .contact-title-wrap{top:16%!important;width:72vw!important}
+  #contact .contact-title-wrap h2{font-size:clamp(52px,14vw,82px)!important}
+  #contact .contact-title-wrap .contact-title-art{max-height:80px!important}
+  #contact .contact-forest-art{right:1%!important;width:42vw!important;max-height:230px!important}
+}
