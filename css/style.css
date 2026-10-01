@@ -3014,3 +3014,65 @@ header.site-header #gnb .btn.active::before{
     line-height:1.55!important;
   }
 }
+
+
+/* Mobile About Profile — compact horizontal swipe cards */
+@media(max-width:700px){
+  #about .about-profile-list{
+    display:grid!important;
+    grid-template-columns:78vw 78vw 78vw!important;
+    grid-template-rows:auto auto!important;
+    column-gap:12px!important;
+    width:calc(100vw - 7%)!important;
+    margin:0 -7vw 18px 0!important;
+    padding:0 7vw 8px 0!important;
+    box-sizing:border-box!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    scroll-snap-type:x mandatory!important;
+    -webkit-overflow-scrolling:touch!important;
+    scrollbar-width:none!important;
+  }
+  #about .about-profile-list::-webkit-scrollbar{display:none!important}
+
+  #about .about-profile-list dt,
+  #about .about-profile-list dd{
+    box-sizing:border-box!important;
+    width:78vw!important;
+    margin:0!important;
+    scroll-snap-align:start!important;
+  }
+  #about .about-profile-list dt{
+    grid-row:1!important;
+    align-self:end!important;
+    padding:13px 16px 3px!important;
+    border:1px solid rgba(105,115,75,.32)!important;
+    border-bottom:0!important;
+    border-radius:16px 16px 0 0!important;
+    background:rgba(246,246,238,.62)!important;
+  }
+  #about .about-profile-list dd{
+    grid-row:2!important;
+    min-height:54px!important;
+    padding:4px 16px 13px!important;
+    border:1px solid rgba(105,115,75,.32)!important;
+    border-top:0!important;
+    border-radius:0 0 16px 16px!important;
+    background:rgba(246,246,238,.62)!important;
+    line-height:1.4!important;
+  }
+  #about .about-profile-list dt:nth-of-type(1),
+  #about .about-profile-list dd:nth-of-type(1){grid-column:1!important}
+  #about .about-profile-list dt:nth-of-type(2),
+  #about .about-profile-list dd:nth-of-type(2){grid-column:2!important}
+  #about .about-profile-list dt:nth-of-type(3),
+  #about .about-profile-list dd:nth-of-type(3){grid-column:3!important}
+
+  /* Pull lower sections upward after compacting Profile */
+  #about .about-profile-block>h4{
+    margin:0 0 12px!important;
+  }
+  #about .about-tools{
+    margin-bottom:18px!important;
+  }
+}
