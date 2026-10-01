@@ -2089,3 +2089,12 @@ header.site-header #gnb .btn.active::before{
 #contact .guestbook-form button{
   left:290px!important;
 }
+
+
+/* Portfolio search vine — lower 20px */
+#works .portfolio-search-vine{
+  top:-35px!important;
+}
+@media(max-width:700px){
+  #works .portfolio-search-vine{top:-35px!important}
+}
