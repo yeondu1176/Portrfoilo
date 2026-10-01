@@ -3266,3 +3266,57 @@ header.site-header #gnb .btn.active::before{
     width:78vw!important;
   }
 }
+
+
+/* Mobile Portfolio — desktop-size card, one centered card per swipe */
+@media(max-width:700px){
+  #works #works_inner{
+    width:100vw!important;
+    max-width:100vw!important;
+    overflow:hidden!important;
+    padding:8px 0 86px!important;
+  }
+  #works #works_inner .list{
+    width:100%!important;
+    display:flex!important;
+    gap:0!important;
+    padding:0!important;
+    box-sizing:border-box!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    scroll-snap-type:x mandatory!important;
+    scroll-behavior:smooth!important;
+    scrollbar-width:none!important;
+    -webkit-overflow-scrolling:touch!important;
+  }
+  #works #works_inner .list::-webkit-scrollbar{display:none!important}
+
+  #works #works_inner .item{
+    width:100vw!important;
+    min-width:100vw!important;
+    max-width:100vw!important;
+    flex:0 0 100vw!important;
+    display:flex!important;
+    justify-content:center!important;
+    align-items:flex-start!important;
+    scroll-snap-align:center!important;
+    scroll-snap-stop:always!important;
+  }
+  #works #works_inner .work-card{
+    width:280px!important;
+    min-width:280px!important;
+    max-width:280px!important;
+    height:450px!important;
+    min-height:450px!important;
+    max-height:450px!important;
+    margin:0 auto!important;
+  }
+  #works #works_inner .thumb-box{
+    height:220px!important;
+    min-height:220px!important;
+    max-height:220px!important;
+  }
+  #works .portfolio-bottom-deco{
+    width:280px!important;
+  }
+}
