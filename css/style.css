@@ -3521,3 +3521,14 @@ header.site-header #gnb .btn.active::before{
     right:calc(-17% + 70px)!important;
   }
 }
+
+
+/* Mobile Contact — SEND beside the MESSAGE underline */
+@media(max-width:700px){
+  #contact .guestbook-form button{
+    left:calc(100% + 18px)!important;
+    right:auto!important;
+    top:auto!important;
+    bottom:0!important;
+  }
+}
