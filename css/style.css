@@ -2660,3 +2660,27 @@ header.site-header #gnb .btn.active::before{
     opacity:1!important;
   }
 }
+
+
+/* Mobile active menu bar — force above header edge */
+@media(max-width:700px){
+  header.site-header #gnb .btn.active{
+    position:relative!important;
+  }
+  header.site-header #gnb .btn.active::after{
+    content:""!important;
+    position:absolute!important;
+    display:block!important;
+    left:50%!important;
+    top:auto!important;
+    bottom:5px!important;
+    width:42px!important;
+    height:1px!important;
+    background:#68714e!important;
+    border:0!important;
+    transform:translateX(-50%)!important;
+    opacity:1!important;
+    visibility:visible!important;
+    z-index:1001!important;
+  }
+}
