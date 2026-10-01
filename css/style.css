@@ -2006,3 +2006,14 @@ header.site-header #gnb .btn.active::before{
 #contact .contact-title-wrap .contact-title-art{
   transform:translateY(-270px)!important;
 }
+
+
+/* Contact forest artwork — reduce by 10px only */
+#contact .contact-forest-art{
+  width:min(603px,calc(27vw + 213px))!important;
+}
+@media(max-width:760px){
+  #contact .contact-forest-art{
+    width:calc(42vw + 210px)!important;
+  }
+}
