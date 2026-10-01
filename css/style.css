@@ -1922,3 +1922,12 @@ header.site-header #gnb .btn.active::before{
     margin-left:calc((420px - 1265px) / 2)!important;
   }
 }
+
+
+/* Contact typography — local MapoDacapo font */
+#contact .contact-title-wrap h2,
+#contact .guestbook-form label,
+#contact .guestbook-form button,
+#contact #guestbook-status{
+  font-family:"MapoDacapo",serif!important;
+}
