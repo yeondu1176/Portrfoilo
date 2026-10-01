@@ -3504,3 +3504,12 @@ header.site-header #gnb .btn.active::before{
     transform:translate(-50%,20px)!important;
   }
 }
+
+
+/* Mobile Contact — move forest artwork 50px left + soften opacity */
+@media(max-width:700px){
+  #contact .contact-forest-art{
+    right:calc(-17% + 50px)!important;
+    opacity:.68!important;
+  }
+}
