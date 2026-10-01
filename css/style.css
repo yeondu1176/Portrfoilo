@@ -2283,3 +2283,15 @@ header.site-header #gnb .btn.active::before{
   left:50%!important;
   transform:translateX(-50%)!important;
 }
+
+
+/* Contact email label + address — center together */
+#contact .contact-email-label,
+#contact .contact-email a{
+  width:max-content!important;
+  align-self:center!important;
+  text-align:center!important;
+  position:relative!important;
+  left:auto!important;
+  transform:none!important;
+}
