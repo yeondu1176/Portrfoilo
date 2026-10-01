@@ -2255,3 +2255,16 @@ header.site-header #gnb .btn.active::before{
   #contact .leaf-three{left:70%;top:58%}
   #contact .leaf-four{left:74%;top:51%}
 }
+
+
+/* Contact email typography — reduce current sizes by 10px */
+#contact .contact-email-label{
+  font-size:33px!important;
+}
+#contact .contact-email a{
+  font-size:36px!important;
+}
+@media(max-width:760px){
+  #contact .contact-email-label{font-size:33px!important}
+  #contact .contact-email a{font-size:34px!important}
+}
