@@ -3343,3 +3343,30 @@ header.site-header #gnb .btn.active::before{
     scroll-snap-stop:normal!important;
   }
 }
+
+
+/* Mobile Portfolio — match desktop card inner sizing exactly */
+@media(max-width:700px){
+  #works #works_inner .work-card{
+    width:280px!important;
+    max-width:280px!important;
+    height:450px!important;
+    min-height:450px!important;
+    max-height:450px!important;
+    padding:20px!important;
+    border-radius:22px!important;
+  }
+  #works #works_inner .work-card .thumb-box,
+  #works #works_inner .thumb-box{
+    width:240px!important;
+    height:220px!important;
+    min-height:220px!important;
+    max-height:220px!important;
+    aspect-ratio:auto!important;
+    margin:0!important;
+    border-radius:20px!important;
+  }
+  #works #works_inner .meta-info{
+    margin-top:18px!important;
+  }
+}
