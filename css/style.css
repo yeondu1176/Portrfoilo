@@ -2732,3 +2732,20 @@ header.site-header #gnb .btn.active::before{
   header.site-header #gnb:has(.btn:nth-child(3).active)::after{left:calc(62.5% - 21px)!important}
   header.site-header #gnb:has(.btn:nth-child(4).active)::after{left:calc(87.5% - 21px)!important}
 }
+
+
+/* Mobile active menu — emphasize text instead of indicator bar */
+@media(max-width:700px){
+  header.site-header #gnb::after{display:none!important}
+  header.site-header #gnb .btn.active{
+    box-shadow:none!important;
+    font-size:13px!important;
+    font-weight:400!important;
+    color:#56603e!important;
+    transform:scale(1.08)!important;
+  }
+  header.site-header #gnb .btn.active::before,
+  header.site-header #gnb .btn.active::after{
+    display:none!important;
+  }
+}
