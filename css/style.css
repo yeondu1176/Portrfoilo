@@ -2577,3 +2577,54 @@ header.site-header #gnb .btn.active::before{
   #contact .spark-two{left:67%!important;top:45%!important}
   #contact .spark-three{left:60%!important;top:53%!important}
 }
+
+
+/* Mobile header refinement — compact and evenly spaced */
+@media(max-width:700px){
+  header.site-header{
+    height:92px!important;
+    padding:5px 16px 4px!important;
+    gap:0!important;
+  }
+  header.site-header .header-brand{
+    position:relative!important;
+    width:100%!important;
+    height:47px!important;
+    flex:0 0 47px!important;
+    justify-content:center!important;
+  }
+  header.site-header .header-brand-leaf{
+    left:0!important;
+    top:2px!important;
+    width:42px!important;
+    height:42px!important;
+  }
+  header.site-header #title{
+    font-size:22px!important;
+    line-height:47px!important;
+  }
+  header.site-header #gnb{
+    width:100%!important;
+    height:36px!important;
+  }
+  header.site-header #gnb ul{
+    height:36px!important;
+    display:grid!important;
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+    align-items:center!important;
+  }
+  header.site-header #gnb .btn{
+    width:100%!important;
+    padding:10px 0 9px!important;
+    font-size:10px!important;
+    line-height:1!important;
+    text-align:center!important;
+  }
+  header.site-header #gnb .btn.active::before{
+    display:none!important;
+  }
+  header.site-header #gnb .btn.active::after{
+    bottom:2px!important;
+    width:38px!important;
+  }
+}
