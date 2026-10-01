@@ -1832,3 +1832,18 @@ header.site-header #gnb .btn.active::before{
     max-height:380px!important;
   }
 }
+
+
+/* Contact forest artwork — +50px and 10px upward */
+#contact .contact-forest-art{
+  width:min(613px,calc(27vw + 223px))!important;
+  max-height:530px!important;
+  bottom:calc(1.5% + 10px)!important;
+}
+@media(max-width:760px){
+  #contact .contact-forest-art{
+    width:calc(42vw + 220px)!important;
+    max-height:430px!important;
+    bottom:calc(1.5% + 10px)!important;
+  }
+}
