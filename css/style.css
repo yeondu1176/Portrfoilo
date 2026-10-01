@@ -1847,3 +1847,50 @@ header.site-header #gnb .btn.active::before{
     bottom:calc(1.5% + 10px)!important;
   }
 }
+
+
+/* Contact title — match supplied reference composition */
+#contact .contact-title-wrap{
+  top:15.5%!important;
+  width:470px!important;
+  max-width:42vw!important;
+}
+#contact .contact-title-wrap h2{
+  position:relative!important;
+  z-index:3!important;
+  margin:0!important;
+  color:#6d7650!important;
+  font-family:"Cormorant Garamond","Times New Roman",Georgia,serif!important;
+  font-size:86px!important;
+  font-weight:400!important;
+  line-height:.78!important;
+  letter-spacing:-3px!important;
+  text-transform:none!important;
+}
+#contact .contact-title-wrap .contact-title-art{
+  position:relative!important;
+  z-index:2!important;
+  display:block!important;
+  width:520px!important;
+  max-width:none!important;
+  height:auto!important;
+  max-height:none!important;
+  margin:-2px 0 0 -25px!important;
+  object-fit:contain!important;
+}
+@media(max-width:1000px){
+  #contact .contact-title-wrap{width:420px!important;max-width:52vw!important}
+  #contact .contact-title-wrap h2{font-size:76px!important}
+  #contact .contact-title-wrap .contact-title-art{
+    width:465px!important;
+    margin-left:-22px!important;
+  }
+}
+@media(max-width:760px){
+  #contact .contact-title-wrap{width:72vw!important;max-width:none!important}
+  #contact .contact-title-wrap h2{font-size:clamp(52px,13vw,72px)!important}
+  #contact .contact-title-wrap .contact-title-art{
+    width:calc(100% + 40px)!important;
+    margin:-1px 0 0 -20px!important;
+  }
+}
