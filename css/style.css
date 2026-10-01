@@ -1752,3 +1752,25 @@ header.site-header #gnb .btn.active::before{
   #contact .contact-title-wrap .contact-title-art{max-height:80px!important}
   #contact .contact-forest-art{right:1%!important;width:42vw!important;max-height:230px!important}
 }
+
+
+/* Contact micro adjustments */
+#contact .contact-title-wrap h2{
+  font-size:clamp(58px,calc(7.2vw - 10px),106px)!important;
+}
+#contact .contact-title-wrap .contact-title-art{
+  width:calc(100% + 5px)!important;
+  max-width:calc(100% + 5px)!important;
+  margin-left:-2.5px!important;
+}
+#contact .contact-forest-art{
+  width:min(393px,calc(27vw + 3px))!important;
+}
+#contact .guestbook-form label:nth-child(2){
+  width:calc(100% - 2px)!important;
+}
+@media(max-width:1000px){
+  #contact .contact-title-wrap h2{
+    font-size:clamp(58px,calc(7.2vw - 10px),106px)!important;
+  }
+}
