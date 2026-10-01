@@ -1964,3 +1964,15 @@ header.site-header #gnb .btn.active::before{
 #contact #guestbook-status{
   font-size:11px!important;
 }
+
+
+/* Contact title — +5px again */
+#contact .contact-title-wrap h2{
+  font-size:96px!important;
+}
+@media(max-width:1000px){
+  #contact .contact-title-wrap h2{font-size:86px!important}
+}
+@media(max-width:760px){
+  #contact .contact-title-wrap h2{font-size:clamp(62px,13vw,82px)!important}
+}
