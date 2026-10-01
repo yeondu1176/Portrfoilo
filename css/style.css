@@ -2268,3 +2268,10 @@ header.site-header #gnb .btn.active::before{
   #contact .contact-email-label{font-size:33px!important}
   #contact .contact-email a{font-size:34px!important}
 }
+
+
+/* Contact airy details cleanup — keep sparkles only */
+#contact .contact-email-sprig,
+#contact .contact-air-details .air-leaf{
+  display:none!important;
+}
