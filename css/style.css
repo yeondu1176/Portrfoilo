@@ -1774,3 +1774,35 @@ header.site-header #gnb .btn.active::before{
     font-size:clamp(58px,calc(7.2vw - 10px),106px)!important;
   }
 }
+
+
+/* Contact stronger visual rebalance */
+#contact .contact-title-wrap h2{
+  font-size:clamp(48px,5.3vw,78px)!important;
+  letter-spacing:-2px!important;
+}
+#contact .contact-title-wrap .contact-title-art{
+  width:calc(100% + 150px)!important;
+  max-width:none!important;
+  max-height:165px!important;
+  margin:-4px 0 0 -75px!important;
+}
+#contact .contact-forest-art{
+  width:min(413px,calc(27vw + 23px))!important;
+  max-height:330px!important;
+}
+@media(max-width:1000px){
+  #contact .contact-title-wrap h2{font-size:clamp(46px,6vw,72px)!important}
+  #contact .contact-title-wrap .contact-title-art{
+    width:calc(100% + 110px)!important;
+    margin-left:-55px!important;
+  }
+}
+@media(max-width:760px){
+  #contact .contact-title-wrap h2{font-size:clamp(42px,10vw,62px)!important}
+  #contact .contact-title-wrap .contact-title-art{
+    width:calc(100% + 70px)!important;
+    margin-left:-35px!important;
+  }
+  #contact .contact-forest-art{width:calc(42vw + 20px)!important}
+}
