@@ -3480,3 +3480,11 @@ header.site-header #gnb .btn.active::before{
     padding-left:25px!important;
   }
 }
+
+
+/* Mobile Portfolio — move search placeholder/text another 10px right */
+@media(max-width:700px){
+  #works .portfolio-search input{
+    padding-left:35px!important;
+  }
+}
