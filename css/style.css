@@ -2116,3 +2116,47 @@ header.site-header #gnb .btn.active::before{
 @media(max-width:700px){
   #works .portfolio-search-vine{top:-20px!important}
 }
+
+
+/* Contact center email */
+#contact .contact-email{
+  position:absolute;
+  left:50%;
+  top:55%;
+  transform:translate(-50%,-50%);
+  z-index:4;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  color:#59633f;
+}
+#contact .contact-email-art{
+  display:block;
+  width:170px;
+  height:auto;
+  margin:0 auto 10px;
+  object-fit:contain;
+}
+#contact .contact-email-label{
+  display:block;
+  margin-bottom:3px;
+  font-family:"MapoDacapo",serif;
+  font-size:13px;
+  letter-spacing:3px;
+}
+#contact .contact-email a{
+  font-family:"MapoDacapo",serif;
+  font-size:16px;
+  color:#59633f;
+  text-decoration:none;
+  white-space:nowrap;
+}
+#contact .contact-email a:hover{
+  color:#78805d;
+}
+@media(max-width:760px){
+  #contact .contact-email{top:53%}
+  #contact .contact-email-art{width:135px}
+  #contact .contact-email a{font-size:14px}
+}
