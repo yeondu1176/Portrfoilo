@@ -3192,3 +3192,30 @@ header.site-header #gnb .btn.active::before{
     margin-bottom:0!important;
   }
 }
+
+
+/* Mobile Portfolio — smaller card, no navigation arrows */
+@media(max-width:700px){
+  #works .navi,
+  #works .prev,
+  #works .next,
+  #works #works_inner .prev,
+  #works #works_inner .next{display:none!important}
+  #works #works_inner{padding:14px 0 18px!important}
+  #works #works_inner .list{padding:0 42px!important;gap:14px!important}
+  #works #works_inner .item{
+    width:calc(100vw - 84px)!important;
+    flex:0 0 calc(100vw - 84px)!important;
+  }
+  #works #works_inner .work-card{
+    padding:11px 11px 16px!important;
+    border-radius:23px!important;
+  }
+  #works #works_inner .work-card .thumb-box{
+    aspect-ratio:4/3!important;
+    border-radius:18px!important;
+  }
+  #works #works_inner .work-card .meta-info{margin-top:10px!important}
+  #works #works_inner .project-title{font-size:24px!important}
+  #works #works_inner .project-desc{font-size:12px!important;line-height:1.45!important}
+}
