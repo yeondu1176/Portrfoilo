@@ -3370,3 +3370,23 @@ header.site-header #gnb .btn.active::before{
     margin-top:18px!important;
   }
 }
+
+
+/* Mobile Portfolio — card 5px smaller */
+@media(max-width:700px){
+  #works #works_inner .work-card{
+    width:275px!important;
+    min-width:275px!important;
+    max-width:275px!important;
+    height:445px!important;
+    min-height:445px!important;
+    max-height:445px!important;
+  }
+  #works #works_inner .work-card .thumb-box,
+  #works #works_inner .thumb-box{
+    width:235px!important;
+    height:215px!important;
+    min-height:215px!important;
+    max-height:215px!important;
+  }
+}
