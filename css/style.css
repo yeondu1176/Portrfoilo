@@ -1931,3 +1931,24 @@ header.site-header #gnb .btn.active::before{
 #contact #guestbook-status{
   font-family:"MapoDacapo",serif!important;
 }
+
+
+/* Contact typography — +5px */
+#contact .contact-title-wrap h2{
+  font-size:91px!important;
+}
+#contact .guestbook-form label{
+  font-size:16px!important;
+}
+#contact .guestbook-form button{
+  font-size:16px!important;
+}
+#contact #guestbook-status{
+  font-size:16px!important;
+}
+@media(max-width:1000px){
+  #contact .contact-title-wrap h2{font-size:81px!important}
+}
+@media(max-width:760px){
+  #contact .contact-title-wrap h2{font-size:clamp(57px,13vw,77px)!important}
+}
