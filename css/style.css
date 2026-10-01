@@ -1516,3 +1516,22 @@ header.site-header #gnb .btn.active::before{
 @media(max-width:700px){
   #works .portfolio-search-vine{width:320px!important;top:38px!important}
 }
+
+
+/* Portfolio vine-only search — final position adjustment */
+#works .portfolio-search-vine{
+  top:20px!important;
+  left:50%!important;
+  width:420px!important;
+  transform:translateX(-50%)!important;
+}
+#works .portfolio-search-button{
+  right:10px!important;
+  top:50%!important;
+}
+@media(max-width:700px){
+  #works .portfolio-search-vine{
+    top:20px!important;
+    width:320px!important;
+  }
+}
