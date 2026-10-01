@@ -2797,3 +2797,11 @@ header.site-header #gnb .btn.active::before{
     object-position:center center!important;
   }
 }
+
+
+/* Mobile header background — 30% more transparent */
+@media(max-width:700px){
+  header.site-header{
+    background:rgba(246,246,238,.48)!important;
+  }
+}
