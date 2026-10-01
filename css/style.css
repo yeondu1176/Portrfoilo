@@ -2699,3 +2699,36 @@ header.site-header #gnb .btn.active::before{
     display:none!important;
   }
 }
+
+
+/* Mobile menu indicator — independent visible bar (not clipped by Swiper slide) */
+@media(max-width:700px){
+  header.site-header #gnb{
+    position:relative!important;
+    overflow:visible!important;
+  }
+  header.site-header #gnb ul{
+    overflow:visible!important;
+  }
+  header.site-header #gnb .btn{
+    overflow:visible!important;
+  }
+  header.site-header #gnb::after{
+    content:""!important;
+    position:absolute!important;
+    left:calc(12.5% - 21px)!important;
+    bottom:0!important;
+    width:42px!important;
+    height:2px!important;
+    background:#68714e!important;
+    display:block!important;
+    opacity:1!important;
+    visibility:visible!important;
+    z-index:1005!important;
+    pointer-events:none!important;
+    transition:left .25s ease!important;
+  }
+  header.site-header #gnb:has(.btn:nth-child(2).active)::after{left:calc(37.5% - 21px)!important}
+  header.site-header #gnb:has(.btn:nth-child(3).active)::after{left:calc(62.5% - 21px)!important}
+  header.site-header #gnb:has(.btn:nth-child(4).active)::after{left:calc(87.5% - 21px)!important}
+}
