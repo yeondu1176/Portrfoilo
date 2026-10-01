@@ -2749,3 +2749,21 @@ header.site-header #gnb .btn.active::before{
     display:none!important;
   }
 }
+
+
+/* Mobile active menu — restore indicator bar */
+@media(max-width:700px){
+  header.site-header #gnb .btn.active{
+    font-size:10px!important;
+    font-weight:400!important;
+    color:#282b20!important;
+    transform:none!important;
+  }
+  header.site-header #gnb::after{
+    display:block!important;
+  }
+  header.site-header #gnb .btn.active::before,
+  header.site-header #gnb .btn.active::after{
+    display:none!important;
+  }
+}
