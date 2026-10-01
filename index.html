@@ -269,18 +269,22 @@
       </section>
 
       <section id="contact" class="section">
-        <div class="contact-inner">
-          <div class="contact-copy">
-            <p class="contact-eyebrow">CONTACT</p>
-            <h2>Leave a little note.</h2>
-            <p>포트폴리오를 봐주셔서 감사합니다.<br>짧은 메시지를 남겨주시면 소중히 확인할게요.</p>
-          </div>
+        <div class="contact-page">
+          <img class="contact-title-art" src="./images/CONTACT 덩굴.png" alt="Contact">
+          <img class="contact-forest-art" src="./images/토끼와 다람쥐의 마법 숲길.png" alt="">
+
           <form id="guestbook-form" class="guestbook-form">
-            <label>NAME<input type="text" name="name" maxlength="40" required autocomplete="name"></label>
-            <label>MESSAGE<textarea name="message" maxlength="500" required rows="5"></textarea></label>
+            <label>
+              <span>NICKNAME</span>
+              <input type="text" name="name" maxlength="40" required autocomplete="name" aria-label="닉네임">
+            </label>
+            <label>
+              <span>MESSAGE</span>
+              <textarea name="message" maxlength="500" required rows="2" aria-label="메시지"></textarea>
+            </label>
             <input class="guestbook-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div id="turnstile-box"></div>
-            <button type="submit">LEAVE A MESSAGE <span>→</span></button>
+            <button type="submit" aria-label="방명록 보내기">SEND</button>
             <p id="guestbook-status" role="status" aria-live="polite"></p>
           </form>
         </div>
