@@ -3764,3 +3764,29 @@ body.guestbook-modal-open{overflow:hidden}
   #contact .guestbook-list{max-height:52vh!important}
   #contact .guestbook-entry{padding:15px 2px 16px!important}
 }
+
+
+/* Guestbook letter button — keep visibly beside SEND */
+#contact .guestbook-form > button[type="submit"]{
+  right:0!important;
+}
+#contact .guestbook-form > .guestbook-open{
+  left:auto!important;
+  right:-38px!important;
+  bottom:-47px!important;
+  z-index:20!important;
+  opacity:1!important;
+  visibility:visible!important;
+  overflow:visible!important;
+  color:#69734b!important;
+  background:rgba(246,246,238,.96)!important;
+  border:1px solid rgba(105,115,75,.42)!important;
+  box-shadow:0 2px 8px rgba(69,76,49,.08)!important;
+}
+@media(max-width:700px){
+  #contact .guestbook-form > .guestbook-open{
+    left:calc(100% + 58px)!important;
+    right:auto!important;
+    bottom:-4px!important;
+  }
+}
