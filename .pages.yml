@@ -10,7 +10,6 @@ content:
     format: json
     list: true
     fields:
-      - { name: id, label: ID / Slug, type: string, required: true }
       - { name: title, label: 작품명, type: string, required: true }
       - { name: category, label: 카테고리, type: string, required: true }
       - { name: year, label: 연도, type: number }
