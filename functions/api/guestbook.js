@@ -15,7 +15,7 @@ const toBase64 = (text) => {
   return btoa(binary);
 };
 
-async function getApprovedEntries(env) {
+async function getGuestbookEntries(env) {
   const required = ["GITHUB_TOKEN", "GITHUB_OWNER", "GITHUB_REPO", "GITHUB_BRANCH"];
   if (required.some(key => !env[key])) return [];
 
@@ -41,7 +41,6 @@ async function getApprovedEntries(env) {
       const response = await fetch(file.download_url, { headers: { "User-Agent": "portfolio-guestbook" } });
       if (!response.ok) continue;
       const entry = await response.json();
-      if (entry.approved !== true) continue;
       entries.push({
         name: safeText(entry.name, 40),
         message: safeText(entry.message, 500),
@@ -69,7 +68,7 @@ export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
   if (url.searchParams.get("list") === "1") {
     try {
-      return json({ entries: await getApprovedEntries(env) });
+      return json({ entries: await getGuestbookEntries(env) });
     } catch {
       return json({ error: "방명록을 불러오지 못했습니다." }, 500);
     }
