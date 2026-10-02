@@ -1,11 +1,10 @@
 [
   {
-    "id": "video",
     "title": "아지트 로고",
     "category": "Branding",
     "year": 2026,
     "thumbnail": "/images/아지트의 황혼빛 원형 간판-2.png",
-    "description": "네온사인들과 함께 비밀스러운 공간으로 비밀스러운 공간이지만 건강하게 놀수있는 분위기의 게임룸 브랜딩 진행\n",
+    "description": "비밀스러운 공간으로 비밀스러운 공간이지만 건강하게 놀수있는 분위기의 게임룸 브랜딩 진행\n",
     "keywords": [
       "브랜딩",
       "로고"
@@ -16,7 +15,6 @@
     "order": 1
   },
   {
-    "id": "motion",
     "title": "Kinetic Identity",
     "category": "Motion Graphics",
     "year": 2026,
@@ -27,7 +25,6 @@
     "order": 2
   },
   {
-    "id": "poster",
     "title": "Exhibition Visual",
     "category": "Poster Design",
     "year": 2026,
@@ -38,7 +35,6 @@
     "order": 3
   },
   {
-    "id": "branding",
     "title": "Atelier Identity",
     "category": "Branding",
     "year": 2026,
@@ -49,7 +45,6 @@
     "order": 4
   },
   {
-    "id": "cardnews",
     "title": "Editorial Story",
     "category": "Card News",
     "year": 2026,
@@ -60,7 +55,6 @@
     "order": 5
   },
   {
-    "id": "brochure",
     "title": "Craft Collection",
     "category": "Brochure",
     "year": 2026,
@@ -71,7 +65,6 @@
     "order": 6
   },
   {
-    "id": "leaflet",
     "title": "Folding Guide",
     "category": "Leaflet",
     "year": 2026,
@@ -82,7 +75,6 @@
     "order": 7
   },
   {
-    "id": "work-08",
     "title": "New Project",
     "category": "Portfolio",
     "year": 2026,
