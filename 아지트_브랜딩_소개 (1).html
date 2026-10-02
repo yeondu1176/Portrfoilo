@@ -67,11 +67,11 @@ if(reduceMotion){gsap.set('.reveal',{autoAlpha:1,y:0});}else{
  window.addEventListener('wheel',event=>{
   if(event.ctrlKey||Math.abs(event.deltaY)<2||event.target.closest('.swiper'))return;
   event.preventDefault();
-  const distance=Math.max(-900,Math.min(950,event.deltaY*2.4)); // 휠 입력을 2.2배 반영해 손의 움직임에 더 크게 반응합니다.
+  const distance=Math.max(-900,Math.min(925,event.deltaY*2.3)); // 휠 입력을 2.2배 반영해 손의 움직임에 더 크게 반응합니다.
   const maxScroll=document.documentElement.scrollHeight-innerHeight;
   scrollTarget=Math.max(0,Math.min(maxScroll,scrollTarget+distance)); // 연속 입력을 누적해 스크롤 거리가 잘리지 않게 합니다.
   scrollTween?.kill();
-  scrollTween=gsap.to(window,{scrollTo:{y:scrollTarget,autoKill:true},duration:.285,ease:'power2.out',onComplete:()=>{scrollTarget=window.scrollY;}}); // 짧은 보간으로 빠르고 자연스럽게 이동합니다.
+  scrollTween=gsap.to(window,{scrollTo:{y:scrollTarget,autoKill:true},duration:.292,ease:'power2.out',onComplete:()=>{scrollTarget=window.scrollY;}}); // 짧은 보간으로 빠르고 자연스럽게 이동합니다.
  },{passive:false});
 }
 </script></body></html>
