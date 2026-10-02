@@ -3987,3 +3987,16 @@ body.guestbook-modal-open{overflow:hidden}
     bottom:6px!important;
   }
 }
+
+
+/* Guestbook controls — keep about 10px gap after SEND */
+#contact .guestbook-form > button.guestbook-open{
+  left:362px!important;
+  right:auto!important;
+}
+@media(max-width:700px){
+  #contact .guestbook-form > button.guestbook-open{
+    left:calc(100% + 84px)!important;
+    right:auto!important;
+  }
+}
