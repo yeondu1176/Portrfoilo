@@ -4134,3 +4134,9 @@ body.guestbook-modal-open{
   white-space:pre-wrap;
   overflow-wrap:anywhere;
 }
+
+
+/* Guestbook message — start at one line */
+#contact .guestbook-form textarea[name="message"]{
+  min-height:20px!important;
+}
