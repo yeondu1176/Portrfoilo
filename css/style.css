@@ -3540,3 +3540,85 @@ header.site-header #gnb .btn.active::before{
     bottom:calc(2% + 30px)!important;
   }
 }
+
+
+/* Desktop fluid responsiveness — 2026-10-02 */
+@media (min-width:1100px){
+  /* Header scales smoothly with desktop width */
+  header.site-header{
+    height:clamp(72px,4.48vw,86px);
+    padding-left:clamp(24px,2.2vw,42px);
+    padding-right:clamp(52px,7.5vw,144px);
+    gap:clamp(18px,1.45vw,28px);
+    grid-template-columns:minmax(clamp(250px,15.6vw,300px),1fr) minmax(clamp(300px,18.75vw,360px),1.55fr) auto;
+  }
+  header.site-header .header-brand{gap:clamp(12px,1.04vw,20px)}
+  header.site-header .header-brand-leaf{width:clamp(58px,3.96vw,76px);height:clamp(54px,3.65vw,70px)}
+  header.site-header #title{font-size:clamp(22px,1.41vw,27px)}
+  header.site-header .header-center-deco{gap:clamp(12px,.94vw,18px)}
+  header.site-header .header-center-deco img{width:clamp(56px,3.75vw,72px);height:clamp(40px,2.6vw,50px)}
+  header.site-header #gnb ul{gap:clamp(20px,1.77vw,34px)}
+  header.site-header #gnb .btn{font-size:clamp(11px,.68vw,13px)}
+
+  /* Main composition keeps the same relative placement while scaling */
+  #main #main_inner{width:clamp(82%,86vw,88%);height:clamp(66%,70vh,74%)}
+  #main #main_inner .title{font-size:clamp(44px,3.8vw,73px);margin-bottom:clamp(14px,1.04vw,20px)}
+  #main #main_inner .sub_line{left:clamp(56%,62vw,64%);font-size:clamp(12px,1vw,19px)}
+
+  /* About: fluid desktop spacing and artwork */
+  #about .about-page{
+    padding-left:clamp(29%,30.5vw,31.5%);
+    padding-right:clamp(5.5%,8.5vw,9%);
+    padding-top:clamp(105px,13.5vh,135px);
+  }
+  #about .about-title-area{
+    left:clamp(5.8%,8.3vw,8.3%);
+    width:clamp(210px,19vw,365px);
+    min-width:0;
+  }
+  #about .about-title-area h2{font-size:clamp(62px,6.1vw,100px)}
+  #about .about-vine-image{width:clamp(210px,15.6vw,300px)}
+  #about .about-content{width:min(clamp(680px,42.7vw,820px),100%)}
+  #about .about-heading-row{gap:clamp(18px,1.46vw,28px)}
+  #about .about-heading-row h3{font-size:clamp(26px,1.62vw,31px)}
+  #about .about-profile-list{grid-template-columns:clamp(165px,10.7vw,205px) 1fr}
+  #about .about-profile-list dt{font-size:clamp(17px,1.1vw,21px)}
+  #about .about-profile-list dd{font-size:clamp(15px,.94vw,18px)}
+  #about .about-tools{gap:clamp(16px,1.35vw,26px)}
+  #about .about-tool{min-width:clamp(58px,3.75vw,72px);font-size:clamp(13px,.84vw,16px)}
+  #about .about-bg-corner{width:clamp(30%,36vw,36%)}
+
+  /* Portfolio: cards and viewport breathe with desktop size */
+  #works .work-header{width:clamp(82%,86vw,88%)}
+  #works .portfolio-search{width:clamp(340px,21.9vw,420px)!important}
+  #works #works_inner{
+    width:min(1165px,calc(100vw - 8vw))!important;
+    max-width:calc(100vw - 8vw)!important;
+    padding-top:clamp(28px,2.6vw,50px);
+    padding-bottom:clamp(28px,2.6vw,50px);
+  }
+  #works .portfolio-controls{bottom:clamp(14px,1.15vw,22px)!important}
+  #works .portfolio-controls button{
+    width:clamp(48px,3.02vw,58px)!important;
+    height:clamp(48px,3.02vw,58px)!important;
+    font-size:clamp(20px,1.25vw,24px)!important;
+  }
+
+  /* Contact: preserve composition but make offsets and sizes fluid */
+  #contact .contact-title-wrap{
+    top:clamp(12%,15vh,15%)!important;
+    width:min(clamp(450px,31.25vw,600px),42vw)!important;
+  }
+  #contact .contact-title-wrap h2{font-size:clamp(58px,6vw,106px)!important}
+  #contact .contact-forest-art{
+    right:clamp(1.5%,2.5vw,2.5%)!important;
+    width:min(clamp(300px,20.3vw,390px),27vw)!important;
+    max-height:clamp(250px,16.15vw,310px)!important;
+  }
+  #contact .guestbook-form{
+    left:clamp(6.5%,9.5vw,9.5%);
+    bottom:clamp(6%,9vh,9%);
+    width:min(clamp(400px,27.1vw,520px),42vw);
+    gap:clamp(42px,3.23vw,62px);
+  }
+}
