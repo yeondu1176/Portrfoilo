@@ -3622,3 +3622,11 @@ header.site-header #gnb .btn.active::before{
     gap:clamp(42px,3.23vw,62px);
   }
 }
+
+
+/* Works desktop controls — keep arrows nested in the center vine */
+@media (min-width:701px){
+  #works .portfolio-controls{
+    bottom:64px!important;
+  }
+}
