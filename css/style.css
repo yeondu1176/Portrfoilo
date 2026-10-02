@@ -3920,3 +3920,14 @@ body.guestbook-modal-open{overflow:hidden}
     bottom:147px!important;
   }
 }
+
+
+/* Guestbook letter — move down another 10px */
+#contact .guestbook-form > button.guestbook-open{
+  bottom:94px!important;
+}
+@media(max-width:700px){
+  #contact .guestbook-form > button.guestbook-open{
+    bottom:137px!important;
+  }
+}
