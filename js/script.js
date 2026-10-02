@@ -307,9 +307,9 @@ const guestbookMessage = guestbookForm?.querySelector('textarea[name="message"]'
 function resizeGuestbookMessage() {
   if (!guestbookMessage) return;
   const maxHeight = 126;
-  guestbookMessage.style.height = 'auto';
+  guestbookMessage.style.setProperty('height', 'auto', 'important');
   const nextHeight = Math.min(guestbookMessage.scrollHeight, maxHeight);
-  guestbookMessage.style.height = `${nextHeight}px`;
+  guestbookMessage.style.setProperty('height', `${nextHeight}px`, 'important');
   guestbookMessage.classList.toggle('is-scrollable', guestbookMessage.scrollHeight > maxHeight);
 }
 
