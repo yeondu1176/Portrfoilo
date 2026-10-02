@@ -4000,3 +4000,16 @@ body.guestbook-modal-open{overflow:hidden}
     right:auto!important;
   }
 }
+
+
+/* Guestbook letter — +3px icon, 5px gap from SEND */
+#contact .guestbook-form > button.guestbook-open{
+  left:357px!important;
+  font-size:23px!important;
+}
+@media(max-width:700px){
+  #contact .guestbook-form > button.guestbook-open{
+    left:calc(100% + 79px)!important;
+    font-size:22px!important;
+  }
+}
