@@ -3820,3 +3820,14 @@ body.guestbook-modal-open{overflow:hidden}
     line-height:26px!important;
   }
 }
+
+
+/* Guestbook letter spacing — visually detach from SEND */
+#contact .guestbook-form > .guestbook-open{
+  left:calc(100% + 44px)!important;
+}
+@media(max-width:700px){
+  #contact .guestbook-form > .guestbook-open{
+    left:calc(100% + 102px)!important;
+  }
+}
