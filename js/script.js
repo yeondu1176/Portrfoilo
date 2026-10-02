@@ -207,6 +207,7 @@ setupTurnstile();
 const guestbookModal = document.getElementById('guestbook-modal');
 const guestbookOpen = document.getElementById('guestbook-open');
 const guestbookList = document.getElementById('guestbook-list');
+const GUESTBOOK_SEEN_KEY = 'portfolioGuestbookLastSeen';
 
 function formatGuestbookDate(value) {
   const date = new Date(value);
@@ -216,7 +217,39 @@ function formatGuestbookDate(value) {
   }).format(date);
 }
 
-async function loadGuestbookEntries() {
+function newestGuestbookTime(entries = []) {
+  return entries.reduce((latest, entry) => {
+    const time = Date.parse(entry.createdAt || '');
+    return Number.isNaN(time) ? latest : Math.max(latest, time);
+  }, 0);
+}
+
+function markGuestbookSeen(entries = []) {
+  const newest = newestGuestbookTime(entries);
+  if (newest) localStorage.setItem(GUESTBOOK_SEEN_KEY, String(newest));
+  guestbookOpen?.classList.remove('has-unread');
+}
+
+async function checkGuestbookUnread() {
+  if (!guestbookOpen) return;
+  try {
+    const response = await fetch('/api/guestbook?list=1', { cache: 'no-store' });
+    if (!response.ok) return;
+    const result = await response.json();
+    const entries = Array.isArray(result.entries) ? result.entries : [];
+    const newest = newestGuestbookTime(entries);
+    const lastSeen = Number(localStorage.getItem(GUESTBOOK_SEEN_KEY) || 0);
+
+    if (!lastSeen && newest) {
+      localStorage.setItem(GUESTBOOK_SEEN_KEY, String(newest));
+      guestbookOpen.classList.remove('has-unread');
+      return;
+    }
+    guestbookOpen.classList.toggle('has-unread', newest > lastSeen);
+  } catch (_) {}
+}
+
+async function loadGuestbookEntries(markAsSeen = false) {
   if (!guestbookList) return;
   guestbookList.innerHTML = '<p class="guestbook-empty">방명록을 불러오는 중...</p>';
   try {
@@ -224,6 +257,7 @@ async function loadGuestbookEntries() {
     const result = await response.json();
     if (!response.ok) throw new Error(result.error || '방명록을 불러오지 못했습니다.');
     const entries = Array.isArray(result.entries) ? result.entries.slice(0, 10) : [];
+    if (markAsSeen) markGuestbookSeen(entries);
     guestbookList.innerHTML = entries.length ? entries.map(entry => `
       <article class="guestbook-entry">
         <div class="guestbook-entry-head">
@@ -243,7 +277,7 @@ function openGuestbookModal() {
   guestbookModal.classList.add('is-open');
   guestbookModal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('guestbook-modal-open');
-  loadGuestbookEntries();
+  loadGuestbookEntries(true);
   guestbookModal.querySelector('.guestbook-close')?.focus();
 }
 
@@ -260,3 +294,7 @@ document.querySelectorAll('[data-guestbook-close]').forEach(el => el.addEventLis
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && guestbookModal?.classList.contains('is-open')) closeGuestbookModal();
 });
+
+
+checkGuestbookUnread();
+window.setInterval(checkGuestbookUnread, 60000);
