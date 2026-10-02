@@ -3635,7 +3635,7 @@ header.site-header #gnb .btn.active::before{
 /* Works desktop controls — enlarge circular buttons by 10px */
 @media (min-width:701px){
   #works .portfolio-controls button{
-    width:84px!important;
-    height:84px!important;
+    width:81px!important;
+    height:81px!important;
   }
 }
