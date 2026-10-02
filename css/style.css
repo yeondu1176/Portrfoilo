@@ -4013,3 +4013,14 @@ body.guestbook-modal-open{overflow:hidden}
     font-size:22px!important;
   }
 }
+
+
+/* Guestbook letter — restore 10px gap */
+#contact .guestbook-form > button.guestbook-open{
+  left:362px!important;
+}
+@media(max-width:700px){
+  #contact .guestbook-form > button.guestbook-open{
+    left:calc(100% + 84px)!important;
+  }
+}
