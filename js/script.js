@@ -307,11 +307,14 @@ const guestbookMessage = guestbookForm?.querySelector('textarea[name="message"]'
 function resizeGuestbookMessage() {
   if (!guestbookMessage) return;
   const maxHeight = 126;
-  guestbookMessage.style.setProperty('height', 'auto', 'important');
   const minHeight = 20;
-  const nextHeight = guestbookMessage.value
-    ? Math.max(minHeight, Math.min(guestbookMessage.scrollHeight, maxHeight))
-    : minHeight;
+  if (!guestbookMessage.value) {
+    guestbookMessage.style.setProperty('height', `${minHeight}px`, 'important');
+    guestbookMessage.classList.remove('is-scrollable');
+    return;
+  }
+  guestbookMessage.style.setProperty('height', `${minHeight}px`, 'important');
+  const nextHeight = Math.max(minHeight, Math.min(guestbookMessage.scrollHeight, maxHeight));
   guestbookMessage.style.setProperty('height', `${nextHeight}px`, 'important');
   guestbookMessage.classList.toggle('is-scrollable', guestbookMessage.scrollHeight > maxHeight);
 }
