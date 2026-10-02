@@ -8,10 +8,7 @@ content:
     type: file
     path: data/works.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{title} · {category}"
+    list: true
     fields:
       - { name: id, label: ID / Slug, type: string, required: true }
       - { name: title, label: 작품명, type: string, required: true }
