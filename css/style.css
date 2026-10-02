@@ -4046,3 +4046,39 @@ body.guestbook-modal-open{overflow:hidden}
     left:calc(100% + 94px)!important;
   }
 }
+
+
+/* Guestbook viewer — keep the panel inside Contact page */
+#contact .contact-page{
+  position:relative!important;
+}
+#contact .guestbook-modal{
+  position:absolute!important;
+  inset:0!important;
+  z-index:80!important;
+  padding:clamp(24px,4vw,60px)!important;
+  box-sizing:border-box!important;
+  overflow:hidden!important;
+}
+#contact .guestbook-modal-backdrop{
+  position:absolute!important;
+  inset:0!important;
+  background:rgba(246,247,238,.62)!important;
+  backdrop-filter:blur(2px)!important;
+}
+#contact .guestbook-panel{
+  width:min(620px,88%)!important;
+  max-height:min(680px,78%)!important;
+}
+body.guestbook-modal-open{
+  overflow:auto!important;
+}
+@media(max-width:700px){
+  #contact .guestbook-modal{
+    padding:22px 18px!important;
+  }
+  #contact .guestbook-panel{
+    width:100%!important;
+    max-height:88%!important;
+  }
+}
