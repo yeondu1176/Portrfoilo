@@ -4117,3 +4117,20 @@ body.guestbook-modal-open{
 #contact .guestbook-form textarea[name="message"].is-scrollable{
   overflow-y:auto;
 }
+
+
+/* Guestbook message — override old fixed 20px height */
+#contact .guestbook-form textarea[name="message"]{
+  height:auto!important;
+  min-height:34px!important;
+  max-height:126px!important;
+  overflow-y:hidden!important;
+  white-space:pre-wrap;
+}
+#contact .guestbook-form textarea[name="message"].is-scrollable{
+  overflow-y:auto!important;
+}
+#contact .guestbook-entry-message{
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+}
