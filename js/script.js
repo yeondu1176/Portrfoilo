@@ -191,6 +191,7 @@ guestbookForm?.addEventListener('submit', async event => {
     turnstileToken = "";
     status.textContent = '메시지가 전송되었습니다. 감사합니다.';
     if (window.turnstile) window.turnstile.reset();
+    if (document.getElementById('guestbook-modal')?.classList.contains('is-open')) loadGuestbookEntries();
   } catch (error) {
     status.textContent = error.message;
   } finally {
@@ -200,3 +201,62 @@ guestbookForm?.addEventListener('submit', async event => {
 
 loadWorks();
 setupTurnstile();
+
+
+// Guestbook viewer: approved latest 10
+const guestbookModal = document.getElementById('guestbook-modal');
+const guestbookOpen = document.getElementById('guestbook-open');
+const guestbookList = document.getElementById('guestbook-list');
+
+function formatGuestbookDate(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return '';
+  return new Intl.DateTimeFormat('ko-KR', {
+    year: 'numeric', month: '2-digit', day: '2-digit'
+  }).format(date);
+}
+
+async function loadGuestbookEntries() {
+  if (!guestbookList) return;
+  guestbookList.innerHTML = '<p class="guestbook-empty">방명록을 불러오는 중...</p>';
+  try {
+    const response = await fetch('/api/guestbook?list=1', { cache: 'no-store' });
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.error || '방명록을 불러오지 못했습니다.');
+    const entries = Array.isArray(result.entries) ? result.entries.slice(0, 10) : [];
+    guestbookList.innerHTML = entries.length ? entries.map(entry => `
+      <article class="guestbook-entry">
+        <div class="guestbook-entry-head">
+          <strong class="guestbook-entry-name">${escapeHtml(entry.name)}</strong>
+          <time class="guestbook-entry-date" datetime="${escapeHtml(entry.createdAt)}">${formatGuestbookDate(entry.createdAt)}</time>
+        </div>
+        <p class="guestbook-entry-message">${escapeHtml(entry.message)}</p>
+      </article>
+    `).join('') : '<p class="guestbook-empty">아직 공개된 방명록이 없어요.</p>';
+  } catch (error) {
+    guestbookList.innerHTML = `<p class="guestbook-empty">${escapeHtml(error.message)}</p>`;
+  }
+}
+
+function openGuestbookModal() {
+  if (!guestbookModal) return;
+  guestbookModal.classList.add('is-open');
+  guestbookModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('guestbook-modal-open');
+  loadGuestbookEntries();
+  guestbookModal.querySelector('.guestbook-close')?.focus();
+}
+
+function closeGuestbookModal() {
+  if (!guestbookModal) return;
+  guestbookModal.classList.remove('is-open');
+  guestbookModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('guestbook-modal-open');
+  guestbookOpen?.focus();
+}
+
+guestbookOpen?.addEventListener('click', openGuestbookModal);
+document.querySelectorAll('[data-guestbook-close]').forEach(el => el.addEventListener('click', closeGuestbookModal));
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && guestbookModal?.classList.contains('is-open')) closeGuestbookModal();
+});
