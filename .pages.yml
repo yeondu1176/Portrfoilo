@@ -22,6 +22,7 @@ content:
         type: image
         required: true
       - { name: description, label: 간단한 설명, type: text }
+      - { name: keywords, label: 검색 키워드, type: string, list: true }
       - name: detailPage
         label: 상세 페이지
         type: reference
