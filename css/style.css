@@ -4104,3 +4104,16 @@ body.guestbook-modal-open{
   opacity:1;
   transform:scale(1);
 }
+
+
+/* Guestbook message — auto grow up to about 6 lines */
+#contact .guestbook-form textarea[name="message"]{
+  min-height:34px!important;
+  max-height:126px!important;
+  overflow-y:hidden;
+  line-height:1.55!important;
+  transition:height .12s ease;
+}
+#contact .guestbook-form textarea[name="message"].is-scrollable{
+  overflow-y:auto;
+}
