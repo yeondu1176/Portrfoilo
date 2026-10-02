@@ -3907,3 +3907,16 @@ body.guestbook-modal-open{overflow:hidden}
     bottom:152px!important;
   }
 }
+
+
+/* Guestbook letter — down 5px, left 10px */
+#contact .guestbook-form > button.guestbook-open{
+  left:calc(100% + 24px)!important;
+  bottom:104px!important;
+}
+@media(max-width:700px){
+  #contact .guestbook-form > button.guestbook-open{
+    left:calc(100% + 82px)!important;
+    bottom:147px!important;
+  }
+}
