@@ -3874,3 +3874,14 @@ body.guestbook-modal-open{overflow:hidden}
     bottom:-8px!important;
   }
 }
+
+
+/* Guestbook letter — move up 10px */
+#contact .guestbook-form > button.guestbook-open{
+  bottom:-41px!important;
+}
+@media(max-width:700px){
+  #contact .guestbook-form > button.guestbook-open{
+    bottom:2px!important;
+  }
+}
