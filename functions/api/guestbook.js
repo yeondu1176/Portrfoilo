@@ -15,6 +15,43 @@ const toBase64 = (text) => {
   return btoa(binary);
 };
 
+async function getApprovedEntries(env) {
+  const required = ["GITHUB_TOKEN", "GITHUB_OWNER", "GITHUB_REPO", "GITHUB_BRANCH"];
+  if (required.some(key => !env[key])) return [];
+
+  const headers = {
+    "Authorization": `Bearer ${env.GITHUB_TOKEN}`,
+    "Accept": "application/vnd.github+json",
+    "User-Agent": "portfolio-guestbook",
+    "X-GitHub-Api-Version": "2022-11-28"
+  };
+  const directory = await fetch(
+    `https://api.github.com/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/contents/content/guestbook?ref=${encodeURIComponent(env.GITHUB_BRANCH)}`,
+    { headers }
+  );
+  if (!directory.ok) return [];
+  const files = (await directory.json())
+    .filter(item => item.type === "file" && item.name.endsWith(".json"))
+    .sort((a, b) => b.name.localeCompare(a.name));
+
+  const entries = [];
+  for (const file of files) {
+    if (entries.length >= 10) break;
+    try {
+      const response = await fetch(file.download_url, { headers: { "User-Agent": "portfolio-guestbook" } });
+      if (!response.ok) continue;
+      const entry = await response.json();
+      if (entry.approved !== true) continue;
+      entries.push({
+        name: safeText(entry.name, 40),
+        message: safeText(entry.message, 500),
+        createdAt: entry.createdAt || ""
+      });
+    } catch (_) {}
+  }
+  return entries;
+}
+
 async function verifyTurnstile(request, env, token) {
   if (!env.TURNSTILE_SECRET_KEY) return true;
   if (!token) return false;
@@ -28,7 +65,15 @@ async function verifyTurnstile(request, env, token) {
   return Boolean(result.success);
 }
 
-export async function onRequestGet({ env }) {
+export async function onRequestGet({ request, env }) {
+  const url = new URL(request.url);
+  if (url.searchParams.get("list") === "1") {
+    try {
+      return json({ entries: await getApprovedEntries(env) });
+    } catch {
+      return json({ error: "방명록을 불러오지 못했습니다." }, 500);
+    }
+  }
   return json({ turnstileSiteKey: env.TURNSTILE_SITE_KEY || "" });
 }
 
