@@ -3953,3 +3953,16 @@ body.guestbook-modal-open{overflow:hidden}
     bottom:97px!important;
   }
 }
+
+
+/* Guestbook letter — align vertically with SEND */
+#contact .guestbook-form > button.guestbook-open{
+  top:26px!important;
+  bottom:auto!important;
+}
+@media(max-width:700px){
+  #contact .guestbook-form > button.guestbook-open{
+    top:auto!important;
+    bottom:3px!important;
+  }
+}
