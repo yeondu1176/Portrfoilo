@@ -308,7 +308,8 @@ function resizeGuestbookMessage() {
   if (!guestbookMessage) return;
   const maxHeight = 126;
   guestbookMessage.style.setProperty('height', 'auto', 'important');
-  const nextHeight = Math.min(guestbookMessage.scrollHeight, maxHeight);
+  const minHeight = 20;
+  const nextHeight = Math.max(minHeight, Math.min(guestbookMessage.scrollHeight, maxHeight));
   guestbookMessage.style.setProperty('height', `${nextHeight}px`, 'important');
   guestbookMessage.classList.toggle('is-scrollable', guestbookMessage.scrollHeight > maxHeight);
 }
