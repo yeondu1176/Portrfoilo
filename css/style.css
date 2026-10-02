@@ -4150,3 +4150,12 @@ body.guestbook-modal-open{
   line-height:15px!important;
   box-sizing:border-box!important;
 }
+
+
+/* Mobile guestbook letter — keep inside viewport */
+@media(max-width:700px){
+  #contact .guestbook-form > button.guestbook-open{
+    left:auto!important;
+    right:0!important;
+  }
+}
