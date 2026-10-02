@@ -4159,3 +4159,14 @@ body.guestbook-modal-open{
     right:0!important;
   }
 }
+
+
+/* Mobile guestbook letter — place above SEND */
+@media(max-width:700px){
+  #contact .guestbook-form > button.guestbook-open{
+    left:auto!important;
+    right:0!important;
+    top:auto!important;
+    bottom:50px!important;
+  }
+}
