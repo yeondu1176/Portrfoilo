@@ -21,29 +21,14 @@ content:
       - { name: description, label: 간단한 설명, type: text }
       - { name: keywords, label: 검색 키워드, type: string, list: true }
       - name: detailPage
-        label: 상세 페이지
-        type: reference
-        options:
-          collection: detail_pages
-          search: "title,path"
-          value: "{fields.path}"
-          label: "{fields.title} — {fields.path}"
+        label: 상세 페이지 주소
+        type: string
+        required: false
+        description: "예: detail-video.html 또는 https://example.com/project"
       - { name: published, label: 공개 여부, type: boolean, default: true }
       - { name: featured, label: 메인 노출, type: boolean, default: false }
       - { name: order, label: 노출 순서, type: number }
 
-  - name: detail_pages
-    label: Detail Pages
-    type: collection
-    path: content/detail-pages
-    format: json
-    filename: "{primary}.json"
-    view:
-      primary: title
-      fields: [title, path]
-    fields:
-      - { name: title, label: 페이지명, type: string, required: true }
-      - { name: path, label: HTML 경로, type: string, required: true }
 
   - name: guestbook
     label: Guestbook
