@@ -3831,3 +3831,16 @@ body.guestbook-modal-open{overflow:hidden}
     left:calc(100% + 102px)!important;
   }
 }
+
+
+/* Guestbook letter micro position */
+#contact .guestbook-form > .guestbook-open{
+  left:calc(100% + 39px)!important;
+  bottom:-49px!important;
+}
+@media(max-width:700px){
+  #contact .guestbook-form > .guestbook-open{
+    left:calc(100% + 97px)!important;
+    bottom:-6px!important;
+  }
+}
