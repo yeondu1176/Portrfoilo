@@ -188,6 +188,7 @@ guestbookForm?.addEventListener('submit', async event => {
     const result = await response.json();
     if (!response.ok) throw new Error(result.error || '전송에 실패했습니다.');
     guestbookForm.reset();
+    resizeGuestbookMessage();
     turnstileToken = "";
     status.textContent = '메시지가 전송되었습니다. 감사합니다.';
     if (window.turnstile) window.turnstile.reset();
@@ -298,3 +299,19 @@ document.addEventListener('keydown', event => {
 
 checkGuestbookUnread();
 window.setInterval(checkGuestbookUnread, 60000);
+
+
+// Guestbook message textarea auto-resize
+const guestbookMessage = guestbookForm?.querySelector('textarea[name="message"]');
+
+function resizeGuestbookMessage() {
+  if (!guestbookMessage) return;
+  const maxHeight = 126;
+  guestbookMessage.style.height = 'auto';
+  const nextHeight = Math.min(guestbookMessage.scrollHeight, maxHeight);
+  guestbookMessage.style.height = `${nextHeight}px`;
+  guestbookMessage.classList.toggle('is-scrollable', guestbookMessage.scrollHeight > maxHeight);
+}
+
+guestbookMessage?.addEventListener('input', resizeGuestbookMessage);
+resizeGuestbookMessage();
