@@ -3844,3 +3844,16 @@ body.guestbook-modal-open{overflow:hidden}
     bottom:-6px!important;
   }
 }
+
+
+/* Guestbook letter micro position — second adjustment */
+#contact .guestbook-form > .guestbook-open{
+  left:calc(100% + 34px)!important;
+  bottom:-51px!important;
+}
+@media(max-width:700px){
+  #contact .guestbook-form > .guestbook-open{
+    left:calc(100% + 92px)!important;
+    bottom:-8px!important;
+  }
+}
