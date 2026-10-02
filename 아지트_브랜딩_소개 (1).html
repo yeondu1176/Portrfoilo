@@ -63,12 +63,15 @@ if(reduceMotion){gsap.set('.reveal',{autoAlpha:1,y:0});}else{
  }));
  // 휠/터치 스크롤을 과도하게 지연하지 않고 GSAP로 가볍게 보간합니다.
  let scrollTween;
+ let scrollTarget=window.scrollY;
  window.addEventListener('wheel',event=>{
   if(event.ctrlKey||Math.abs(event.deltaY)<2||event.target.closest('.swiper'))return;
   event.preventDefault();
-  const distance=Math.max(-650,Math.min(650,event.deltaY)); // 한 번의 휠 입력 이동량 상한(px)입니다.
-  const destination=Math.max(0,Math.min(document.documentElement.scrollHeight-innerHeight,window.scrollY+distance));
-  scrollTween?.kill();scrollTween=gsap.to(window,{scrollTo:{y:destination,autoKill:true},duration:.38,ease:'power2.out'}); // 0.38초 보간으로 빠르고 부드럽게 이동합니다.
+  const distance=Math.max(-900,Math.min(900,event.deltaY*2.2)); // 휠 입력을 2.2배 반영해 손의 움직임에 더 크게 반응합니다.
+  const maxScroll=document.documentElement.scrollHeight-innerHeight;
+  scrollTarget=Math.max(0,Math.min(maxScroll,scrollTarget+distance)); // 연속 입력을 누적해 스크롤 거리가 잘리지 않게 합니다.
+  scrollTween?.kill();
+  scrollTween=gsap.to(window,{scrollTo:{y:scrollTarget,autoKill:true},duration:.3,ease:'power2.out',onComplete:()=>{scrollTarget=window.scrollY;}}); // 짧은 보간으로 빠르고 자연스럽게 이동합니다.
  },{passive:false});
 }
 </script></body></html>
