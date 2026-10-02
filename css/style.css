@@ -4140,3 +4140,13 @@ body.guestbook-modal-open{
 #contact .guestbook-form textarea[name="message"]{
   min-height:20px!important;
 }
+
+
+/* Guestbook message — true single-line initial state */
+#contact .guestbook-form textarea[name="message"]{
+  height:20px!important;
+  min-height:20px!important;
+  padding:0 2px 5px!important;
+  line-height:15px!important;
+  box-sizing:border-box!important;
+}
