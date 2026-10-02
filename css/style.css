@@ -3857,3 +3857,20 @@ body.guestbook-modal-open{overflow:hidden}
     bottom:-8px!important;
   }
 }
+
+
+/* Guestbook letter position fix — neutralize inherited SEND positioning */
+#contact .guestbook-form > button.guestbook-open{
+  top:auto!important;
+  left:calc(100% + 34px)!important;
+  right:auto!important;
+  bottom:-51px!important;
+}
+@media(max-width:700px){
+  #contact .guestbook-form > button.guestbook-open{
+    top:auto!important;
+    left:calc(100% + 92px)!important;
+    right:auto!important;
+    bottom:-8px!important;
+  }
+}
