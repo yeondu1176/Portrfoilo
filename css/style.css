@@ -4035,3 +4035,14 @@ body.guestbook-modal-open{overflow:hidden}
     left:calc(100% + 89px)!important;
   }
 }
+
+
+/* Guestbook letter — 20px gap */
+#contact .guestbook-form > button.guestbook-open{
+  left:372px!important;
+}
+@media(max-width:700px){
+  #contact .guestbook-form > button.guestbook-open{
+    left:calc(100% + 94px)!important;
+  }
+}
