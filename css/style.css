@@ -4082,3 +4082,25 @@ body.guestbook-modal-open{
     max-height:88%!important;
   }
 }
+
+
+/* Guestbook unread indicator */
+#contact .guestbook-form > button.guestbook-open::after{
+  content:"";
+  position:absolute;
+  top:-2px;
+  right:-3px;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#d84a43;
+  box-shadow:0 0 0 2px rgba(246,247,238,.95);
+  opacity:0;
+  transform:scale(.65);
+  transition:opacity .18s ease,transform .18s ease;
+  pointer-events:none;
+}
+#contact .guestbook-form > button.guestbook-open.has-unread::after{
+  opacity:1;
+  transform:scale(1);
+}
