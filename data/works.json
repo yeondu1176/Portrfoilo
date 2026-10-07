@@ -15,10 +15,14 @@
     "order": 1
   },
   {
-    "title": "Kinetic Identity",
-    "category": "Motion Graphics",
+    "title": "여름밤 이야",
+    "category": "Leaflet",
     "year": 2026,
-    "description": "유기적인 타이포그래피 모션과 아날로그 질감을 결합한 인트로 시퀀스.",
+    "thumbnail": "/images/여름밤 이야기 야간투어 브로슈어 (1).png",
+    "description": "전주의 여행투어를 모티브로 한 2단 리플렛 디자인",
+    "keywords": [
+      "리플랫"
+    ],
     "detailPage": "detail-motion.html",
     "published": true,
     "featured": false,
