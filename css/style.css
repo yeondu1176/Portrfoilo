@@ -4202,3 +4202,28 @@ body.guestbook-modal-open{
   line-height:1.4!important;
   opacity:.78!important;
 }
+
+
+/* Works production period — pin to the card itself */
+#works #works_inner .work-card{
+  position:relative!important;
+}
+#works #works_inner .work-card .meta-info{
+  position:static!important;
+  padding-bottom:0!important;
+}
+#works #works_inner .work-card .project-period{
+  position:absolute!important;
+  left:20px!important;
+  bottom:18px!important;
+  margin:0!important;
+  font-size:10px!important;
+  line-height:1.4!important;
+  opacity:.78!important;
+}
+@media(max-width:700px){
+  #works #works_inner .work-card .project-period{
+    left:11px!important;
+    bottom:12px!important;
+  }
+}
