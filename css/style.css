@@ -4185,4 +4185,4 @@ body.guestbook-modal-open{
 
 
 /* Works CMS 제작기간: 설명 아래 작은 보조 정보 */
-#works #works_inner .project-period{font-size:10px!important;line-height:1.4!important;margin:5px 0 0!important;opacity:.78}
+#works #works_inner .work-card .meta-info{flex:1!important}\n#works #works_inner .project-period{font-size:10px!important;line-height:1.4!important;margin:auto 0 0!important;align-self:flex-start!important;opacity:.78}
