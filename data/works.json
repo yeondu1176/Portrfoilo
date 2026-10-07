@@ -3,6 +3,7 @@
     "title": "아지트 로고",
     "category": "Branding",
     "year": 2026,
+    "productionPeriod": "3일",
     "thumbnail": "/images/아지트의 황혼빛 원형 간판-2.png",
     "description": "비밀스러운 공간으로 비밀스러운 공간이지만 건강하게 놀수있는 분위기의 게임룸 브랜딩\n\n",
     "keywords": [
@@ -18,6 +19,7 @@
     "title": "여름밤 이야기",
     "category": "Leaflet",
     "year": 2026,
+    "productionPeriod": "1일",
     "thumbnail": "/images/여름밤 이야기 야간투어 브로슈어 (1).png",
     "description": "전주의 여행투어를 모티브로 한 2단 리플렛 디자인",
     "keywords": [
@@ -34,6 +36,7 @@
     "title": "Exhibition Visual",
     "category": "Poster Design",
     "year": 2026,
+    "productionPeriod": "1일",
     "thumbnail": "/images/산림문화자산 AI 공모전 포스터 데스크 연출.png",
     "description": "종이의 촉감과 대비를 고려한 활판 인쇄풍 아트 페스티벌 메인 포스터.",
     "detailPage": "detail-poster.html",
