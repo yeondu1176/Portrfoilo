@@ -82,6 +82,7 @@ function setupPortfolioSearch(allWorks, list) {
               <span class="category-stamp">${escapeHtml(work.category)}</span>
             </div>
             <h3 class="project-title">${escapeHtml(work.title)}</h3>
+            ${work.productionPeriod ? `<p class="project-period">제작기간 · ${escapeHtml(work.productionPeriod)}</p>` : ""}
             <p class="project-desc">${escapeHtml(work.description)}</p>
           </div>
         </a>
@@ -126,6 +127,7 @@ async function loadWorks() {
               <span class="category-stamp">${escapeHtml(work.category)}</span>
             </div>
             <h3 class="project-title">${escapeHtml(work.title)}</h3>
+            ${work.productionPeriod ? `<p class="project-period">제작기간 · ${escapeHtml(work.productionPeriod)}</p>` : ""}
             <p class="project-desc">${escapeHtml(work.description)}</p>
           </div>
         </a>
