@@ -4182,3 +4182,7 @@ body.guestbook-modal-open{
     transform:translateX(-50%)!important;
   }
 }
+
+
+/* Works CMS 제작기간: 설명 아래 작은 보조 정보 */
+#works #works_inner .project-period{font-size:10px!important;line-height:1.4!important;margin:5px 0 0!important;opacity:.78}
