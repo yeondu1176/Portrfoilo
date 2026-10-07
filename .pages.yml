@@ -13,6 +13,7 @@ content:
       - { name: title, label: 작품명, type: string, required: true }
       - { name: category, label: 카테고리, type: string, required: true }
       - { name: year, label: 연도, type: number }
+      - { name: productionPeriod, label: 제작기간, type: string, required: false, description: "예: 1일, 3일, 2주" }
       - name: thumbnail
         label: 대표 이미지
         type: image
