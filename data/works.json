@@ -21,7 +21,7 @@
     "year": 2026,
     "productionPeriod": "1일",
     "thumbnail": "/images/여름밤 이야기 야간투어 브로슈어 (1).png",
-    "description": "전주의 여행투어를 모티브로 한 2단 리플렛 디자인",
+    "description": "전주의 여행투어을 주제로 한 2단 리플렛 디자인",
     "keywords": [
       "리플랫",
       "2단",
@@ -33,12 +33,15 @@
     "order": 2
   },
   {
-    "title": "Exhibition Visual",
+    "title": "국가산림문화자산 AI 숏폼 영상공모전 포스터",
     "category": "Poster Design",
     "year": 2026,
     "productionPeriod": "1일",
     "thumbnail": "/images/산림문화자산 AI 공모전 포스터 데스크 연출.png",
-    "description": "종이의 촉감과 대비를 고려한 활판 인쇄풍 아트 페스티벌 메인 포스터.",
+    "description": "국가산림문화자산 AI 숏폼 영상공모전 포스터, 박물관을 모티브로 제작",
+    "keywords": [
+      "포스터"
+    ],
     "detailPage": "detail-poster.html",
     "published": true,
     "featured": false,
